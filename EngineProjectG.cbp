@@ -38,10 +38,16 @@
 			<Add directory="Allegro5/lib" />
 			<Add directory="Allegro5/include" />
 		</Compiler>
+		<Unit filename="AlClasses/AlConfig.h" />
 		<Unit filename="AlClasses/AlDisplay.h" />
+		<Unit filename="AlClasses/AlEventQueue.h" />
 		<Unit filename="AlClasses/AlFont.h" />
 		<Unit filename="AlClasses/AlImage.h" />
 		<Unit filename="AlClasses/AlInitAll.h" />
+		<Unit filename="AlClasses/AlKeyboard.h" />
+		<Unit filename="AlClasses/AlMouse.h" />
+		<Unit filename="AlClasses/AlTimer.h" />
+		<Unit filename="Engine/Engine.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

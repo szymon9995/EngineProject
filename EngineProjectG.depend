@@ -1,11 +1,16 @@
 # depslib dependency file v1.0
-1602688298 source:c:\project\engineprojectg\main.cpp
+1603045622 source:c:\project\engineprojectg\main.cpp
 	<iostream>
 	<allegro5/allegro.h>
 	"AlClasses/AlInitAll.h"
 	"AlClasses/AlDisplay.h"
 	"AlClasses/AlImage.h"
 	"AlClasses/AlFont.h"
+	"AlClasses/AlTimer.h"
+	"AlClasses/AlEventQueue.h"
+	"AlClasses/AlKeyboard.h"
+	"AlClasses/AlMouse.h"
+	"AlClasses/AlConfig.h"
 
 1553407448 c:\project\engineprojectg\allegro5\include\allegro5\allegro.h
 	"allegro5/base.h"
@@ -329,4 +334,19 @@
 	<allegro5/allegro.h>
 	<allegro5/allegro_font.h>
 	<iostream>
+
+1602976018 c:\project\engineprojectg\alclasses\altimer.h
+	<allegro5/allegro.h>
+
+1602945090 c:\project\engineprojectg\alclasses\aleventqueue.h
+	<allegro5/allegro.h>
+
+1602945591 c:\project\engineprojectg\alclasses\alkeyboard.h
+	<allegro5/allegro.h>
+
+1603031183 c:\project\engineprojectg\alclasses\almouse.h
+	<allegro5/allegro.h>
+
+1603045702 c:\project\engineprojectg\alclasses\alconfig.h
+	<allegro5/allegro.h>
 
