@@ -10,6 +10,11 @@ private:
 public:
     ALLEGRO_FONT* GetFont();
 
+    
+    //do swojego wlasnego pliku dac poziej
+    //void drawTextf();
+    void DrawText(ALLEGRO_COLOR color,int x,int y,int flags,std::string text);
+
     AlFont();
     AlFont(std::string path,int size,int flags);
     AlFont(std::string path,int size,int flags,bool &check);
@@ -19,6 +24,11 @@ public:
 ALLEGRO_FONT* AlFont::GetFont()
 {
     return font;
+}
+
+void AlFont::DrawText(ALLEGRO_COLOR color,int x,int y,int flags,std::string text)
+{
+    al_draw_text(font,color,x,y,flags,text.c_str());
 }
 
 AlFont::AlFont(std::string path,int size,int flags)
@@ -48,6 +58,5 @@ AlFont::AlFont()
 
 AlFont::~AlFont()
 {
-    if(font!=NULL)
-        al_destroy_font(font);
+    al_destroy_font(font);
 }

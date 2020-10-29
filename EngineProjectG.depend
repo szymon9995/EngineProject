@@ -1,18 +1,9 @@
 # depslib dependency file v1.0
-1603045622 source:c:\project\engineprojectg\main.cpp
-	<iostream>
-	<allegro5/allegro.h>
+1603926148 source:c:\project\engineprojectg\main.cpp
+	"Engine/Engine.h"
 	"AlClasses/AlInitAll.h"
-	"AlClasses/AlDisplay.h"
-	"AlClasses/AlImage.h"
-	"AlClasses/AlFont.h"
-	"AlClasses/AlTimer.h"
-	"AlClasses/AlEventQueue.h"
-	"AlClasses/AlKeyboard.h"
-	"AlClasses/AlMouse.h"
-	"AlClasses/AlConfig.h"
 
-1553407448 c:\project\engineprojectg\allegro5\include\allegro5\allegro.h
+1553403848 c:\project\engineprojectg\allegro5\include\allegro5\allegro.h
 	"allegro5/base.h"
 	"allegro5/altime.h"
 	"allegro5/bitmap.h"
@@ -53,7 +44,7 @@
 	"allegro5/utf8.h"
 	"allegro5/alcompat.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\base.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\base.h
 	<errno.h>
 	<limits.h>
 	<limits.h>
@@ -67,7 +58,7 @@
 	<dmalloc.h>
 	"allegro5/internal/alconfig.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\internal\alconfig.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\internal\alconfig.h
 	"allegro5/platform/alplatf.h"
 	"allegro5/platform/alwatcom.h"
 	"allegro5/platform/almngw32.h"
@@ -82,9 +73,9 @@
 	"allegro5/platform/astdint.h"
 	"allegro5/platform/astdbool.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\platform\alplatf.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\platform\alplatf.h
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\platform\alwatcom.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\platform\alwatcom.h
 	<io.h>
 	<i86.h>
 	<conio.h>
@@ -92,145 +83,145 @@
 	<direct.h>
 	<malloc.h>
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\platform\almngw32.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\platform\almngw32.h
 	<io.h>
 	<fcntl.h>
 	<direct.h>
 	<malloc.h>
 	"allegro5/platform/alplatf.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\platform\albcc32.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\platform\albcc32.h
 	<io.h>
 	<fcntl.h>
 	<direct.h>
 	<malloc.h>
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\platform\almsvc.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\platform\almsvc.h
 	<io.h>
 	<fcntl.h>
 	<direct.h>
 	<malloc.h>
 	"allegro5/platform/alplatf.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\platform\aliphonecfg.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\platform\aliphonecfg.h
 	<fcntl.h>
 	<unistd.h>
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\platform\alosxcfg.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\platform\alosxcfg.h
 	"allegro5/platform/alplatf.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\platform\alandroidcfg.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\platform\alandroidcfg.h
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\platform\alraspberrypicfg.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\platform\alraspberrypicfg.h
 	<fcntl.h>
 	<unistd.h>
 	<sys/types.h>
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\platform\alucfg.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\platform\alucfg.h
 	<fcntl.h>
 	<unistd.h>
 	"alunix.h"
 	"allegro5/platform/alplatf.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\platform\alunix.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\platform\alunix.h
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\platform\allegro_sdl_config.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\platform\allegro_sdl_config.h
 	<fcntl.h>
 	<unistd.h>
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\platform\astdint.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\platform\astdint.h
 	<inttypes.h>
 	<stdint.h>
 	<limits.h>
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\platform\astdbool.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\platform\astdbool.h
 	<stdbool.h>
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\altime.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\altime.h
 	"allegro5/base.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\bitmap.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\bitmap.h
 	"allegro5/color.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\color.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\color.h
 	"allegro5/base.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\bitmap_draw.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\bitmap_draw.h
 	"allegro5/bitmap.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\bitmap_io.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\bitmap_io.h
 	"allegro5/bitmap.h"
 	"allegro5/file.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\file.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\file.h
 	"allegro5/base.h"
 	"allegro5/path.h"
 	"allegro5/utf8.h"
 
-1553407448 c:\project\engineprojectg\allegro5\include\allegro5\path.h
+1553403848 c:\project\engineprojectg\allegro5\include\allegro5\path.h
 	"allegro5/base.h"
 	"allegro5/utf8.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\utf8.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\utf8.h
 	"allegro5/base.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\bitmap_lock.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\bitmap_lock.h
 	"allegro5/bitmap.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\blender.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\blender.h
 	"allegro5/base.h"
 	"allegro5/color.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\clipboard.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\clipboard.h
 	"allegro5/base.h"
 	"allegro5/display.h"
 	"allegro5/utf8.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\display.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\display.h
 	"allegro5/bitmap.h"
 	"allegro5/color.h"
 	"allegro5/events.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\events.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\events.h
 	"allegro5/altime.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\config.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\config.h
 	"allegro5/file.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\cpu.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\cpu.h
 	"allegro5/base.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\debug.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\debug.h
 	<assert.h>
 	"allegro5/base.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\drawing.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\drawing.h
 	"allegro5/color.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\error.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\error.h
 	"allegro5/base.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\fixed.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\fixed.h
 	"allegro5/base.h"
 
-1553407448 c:\project\engineprojectg\allegro5\include\allegro5\fmaths.h
+1553403848 c:\project\engineprojectg\allegro5\include\allegro5\fmaths.h
 	"allegro5/base.h"
 	"allegro5/fixed.h"
 	"allegro5/inline/fmaths.inl"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\inline\fmaths.inl
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\inline\fmaths.inl
 	"allegro5/error.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\fshook.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\fshook.h
 	"allegro5/base.h"
 	"allegro5/file.h"
 	"allegro5/path.h"
 	<sys/types.h>
 
-1553407448 c:\project\engineprojectg\allegro5\include\allegro5\fullscreen_mode.h
+1553403848 c:\project\engineprojectg\allegro5\include\allegro5\fullscreen_mode.h
 	"allegro5/base.h"
 
-1553407448 c:\project\engineprojectg\allegro5\include\allegro5\haptic.h
+1553403848 c:\project\engineprojectg\allegro5\include\allegro5\haptic.h
 	"allegro5/base.h"
 	"allegro5/display.h"
 	"allegro5/events.h"
@@ -239,61 +230,61 @@
 	"allegro5/mouse.h"
 	"allegro5/touch_input.h"
 
-1553407448 c:\project\engineprojectg\allegro5\include\allegro5\joystick.h
+1553403848 c:\project\engineprojectg\allegro5\include\allegro5\joystick.h
 	"allegro5/base.h"
 	"allegro5/events.h"
 
-1553407448 c:\project\engineprojectg\allegro5\include\allegro5\keyboard.h
+1553403848 c:\project\engineprojectg\allegro5\include\allegro5\keyboard.h
 	"allegro5/base.h"
 	"allegro5/events.h"
 	"allegro5/keycodes.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\keycodes.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\keycodes.h
 
-1553407448 c:\project\engineprojectg\allegro5\include\allegro5\mouse.h
+1553403848 c:\project\engineprojectg\allegro5\include\allegro5\mouse.h
 	"allegro5/base.h"
 	"allegro5/events.h"
 
-1553407448 c:\project\engineprojectg\allegro5\include\allegro5\touch_input.h
+1553403848 c:\project\engineprojectg\allegro5\include\allegro5\touch_input.h
 	"allegro5/base.h"
 	"allegro5/events.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\memory.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\memory.h
 	"allegro5/base.h"
 
-1553407448 c:\project\engineprojectg\allegro5\include\allegro5\monitor.h
+1553403848 c:\project\engineprojectg\allegro5\include\allegro5\monitor.h
 	"allegro5/base.h"
 
-1553407448 c:\project\engineprojectg\allegro5\include\allegro5\mouse_cursor.h
+1553403848 c:\project\engineprojectg\allegro5\include\allegro5\mouse_cursor.h
 	"allegro5/base.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\render_state.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\render_state.h
 	"allegro5/base.h"
 
-1553407448 c:\project\engineprojectg\allegro5\include\allegro5\shader.h
+1553403848 c:\project\engineprojectg\allegro5\include\allegro5\shader.h
 	"allegro5/base.h"
 	"allegro5/transformations.h"
 
-1553407448 c:\project\engineprojectg\allegro5\include\allegro5\transformations.h
+1553403848 c:\project\engineprojectg\allegro5\include\allegro5\transformations.h
 	"allegro5/display.h"
 
-1553407448 c:\project\engineprojectg\allegro5\include\allegro5\system.h
+1553403848 c:\project\engineprojectg\allegro5\include\allegro5\system.h
 	"allegro5/config.h"
 	"allegro5/path.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\threads.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\threads.h
 	"allegro5/altime.h"
 
-1553407448 c:\project\engineprojectg\allegro5\include\allegro5\timer.h
+1553403848 c:\project\engineprojectg\allegro5\include\allegro5\timer.h
 	"allegro5/base.h"
 	"allegro5/events.h"
 
-1553407448 c:\project\engineprojectg\allegro5\include\allegro5\tls.h
+1553403848 c:\project\engineprojectg\allegro5\include\allegro5\tls.h
 	"allegro5/base.h"
 
-1553407448 c:\project\engineprojectg\allegro5\include\allegro5\alcompat.h
+1553403848 c:\project\engineprojectg\allegro5\include\allegro5\alcompat.h
 
-1602686386 c:\project\engineprojectg\alclasses\alinitall.h
+1602682786 c:\project\engineprojectg\alclasses\alinitall.h
 	<allegro5/allegro.h>
 	<allegro5/allegro_primitives.h>
 	<allegro5/allegro_image.h>
@@ -302,51 +293,105 @@
 	<allegro5/allegro_acodec.h>
 	<iostream>
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\allegro_primitives.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\allegro_primitives.h
 	<allegro5/allegro.h>
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\allegro_image.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\allegro_image.h
 	"allegro5/base.h"
 
-1553407448 c:\project\engineprojectg\allegro5\include\allegro5\allegro_ttf.h
+1553403848 c:\project\engineprojectg\allegro5\include\allegro5\allegro_ttf.h
 	"allegro5/allegro.h"
 	"allegro5/allegro_font.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\allegro_font.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\allegro_font.h
 	"allegro5/allegro.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\allegro_audio.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\allegro_audio.h
 	"allegro5/allegro.h"
 
-1553407449 c:\project\engineprojectg\allegro5\include\allegro5\allegro_acodec.h
+1553403849 c:\project\engineprojectg\allegro5\include\allegro5\allegro_acodec.h
 	"allegro5/allegro.h"
 	"allegro5/allegro_audio.h"
 
-1602686467 c:\project\engineprojectg\alclasses\aldisplay.h
+1603926747 c:\project\engineprojectg\alclasses\aldisplay.h
 	<allegro5/allegro.h>
 
-1602688253 c:\project\engineprojectg\alclasses\alimage.h
+1603049888 c:\project\engineprojectg\alclasses\alimage.h
 	<iostream>
 	<cstring>
 	<allegro5/allegro.h>
 
-1602688222 c:\project\engineprojectg\alclasses\alfont.h
+1603883065 c:\project\engineprojectg\alclasses\alfont.h
 	<allegro5/allegro.h>
 	<allegro5/allegro_font.h>
 	<iostream>
 
-1602976018 c:\project\engineprojectg\alclasses\altimer.h
+1602972418 c:\project\engineprojectg\alclasses\altimer.h
 	<allegro5/allegro.h>
 
-1602945090 c:\project\engineprojectg\alclasses\aleventqueue.h
+1602941490 c:\project\engineprojectg\alclasses\aleventqueue.h
 	<allegro5/allegro.h>
 
-1602945591 c:\project\engineprojectg\alclasses\alkeyboard.h
+1603049279 c:\project\engineprojectg\alclasses\alkeyboard.h
 	<allegro5/allegro.h>
 
-1603031183 c:\project\engineprojectg\alclasses\almouse.h
+1603027583 c:\project\engineprojectg\alclasses\almouse.h
 	<allegro5/allegro.h>
 
-1603045702 c:\project\engineprojectg\alclasses\alconfig.h
+1603927934 c:\project\engineprojectg\alclasses\alconfig.h
 	<allegro5/allegro.h>
+	<cstring>
+	<iostream>
+
+1603982516 c:\project\engineprojectg\engine\engine.h
+	<iostream>
+	<allegro5/allegro.h>
+	"../AlClasses/AlInitAll.h"
+	"../AlClasses/AlDisplay.h"
+	"../AlClasses/AlImage.h"
+	"../AlClasses/AlFont.h"
+	"../AlClasses/AlTimer.h"
+	"../AlClasses/AlEventQueue.h"
+	"../AlClasses/AlKeyboard.h"
+	"../AlClasses/AlMouse.h"
+	"StartUpConfig.h"
+	"EntityContener.h"
+	"../Test/Test2.h"
+
+1603927314 c:\project\engineprojectg\engine\startupconfig.h
+	"../AlClasses/AlConfig.h"
+
+1603979190 c:\project\engineprojectg\engine\drawablecontener.h
+	<vector>
+	"../AlAbstract/DrawableObject.h"
+
+1603929271 c:\project\engineprojectg\engine\parentclasses.h
+
+1603930987 c:\project\engineprojectg\test\test.h
+	"../Engine/Drawable.h"
+	<allegro5/allegro.h>
+	<allegro5/allegro_primitives.h>
+
+1603972523 c:\project\engineprojectg\engine\drawable.h
+
+1603982507 c:\project\engineprojectg\test\test2.h
+	"../AlAbstract/Entity.h"
+	<allegro5/allegro.h>
+	<allegro5/allegro_primitives.h>
+
+1603974291 c:\project\engineprojectg\engine\drawableobject.h
+
+1603976485 c:\project\engineprojectg\alabstract\updatableobject.h
+
+1603976646 c:\project\engineprojectg\engine\updatablecontener.h
+	<vector>
+	"../AlAbstract/UpdatableObject.h"
+
+1603976746 c:\project\engineprojectg\alabstract\drawableobject.h
+
+1603981477 c:\project\engineprojectg\alabstract\entity.h
+
+1603982331 c:\project\engineprojectg\engine\entitycontener.h
+	"../AlAbstract/Entity.h"
+	<list>
 
