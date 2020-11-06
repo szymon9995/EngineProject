@@ -10,6 +10,7 @@
 #include "../AlClasses/AlEventQueue.h"
 #include "../AlClasses/AlKeyboard.h"
 #include "../AlClasses/AlMouse.h"
+#include "../AlClasses/AlDrawable.h"
 
 #include "StartUpConfig.h"
 #include "EntityContener.h"
@@ -90,7 +91,7 @@ void Engine::Test()
 {
     if(!canBeStarted)
         return;
-
+    display.SetWindowMode(false,true);
     display.CreateDisplay(strartup.getDisplayWidth(),strartup.getDisplayHeight());
 
     //robienie image (dodac lepsze postepowanie kiedy nie mozna zaladowac obrazu)
@@ -131,6 +132,9 @@ void Engine::Test()
         comic_sans_font.DrawText(al_map_rgb(255,255,0),400,400,ALLEGRO_ALIGN_CENTER,"Test Comic!");
         al_draw_text(font.GetFont(),al_map_rgb(255,255,0),400,500,ALLEGRO_ALIGN_CENTER,"Test Default!");
 */
+        AlDrawable::drawLine(0,0,display.getDisplayWidth(),display.getDisplayHeight(),AlDrawable::RED,3);
+        //AlDrawable::drawImage(image,250,250);
+        AlDrawable::drawScaledImage(image,250,250,0.5);
          al_draw_textf(font.GetFont(),al_map_rgb(255,255,0),400,500,ALLEGRO_ALIGN_CENTER,"Amount:%d",0);
         contener.Draw();
         contener.Update();

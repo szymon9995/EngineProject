@@ -5,15 +5,54 @@ class AlDisplay
 {
 private:    
     ALLEGRO_DISPLAY *display;
+    int flags;
 public:
-    ~AlDisplay()
-    {
-        if(display!=NULL)
-            al_destroy_display(display);
-    }
 
-    void CreateDisplay(int w,int h)
-    {
-        display = al_create_display(w,h);
-    }
+    AlDisplay();
+    ~AlDisplay();
+
+    void CreateDisplay(int w,int h);
+    void SetWindowMode(bool isFullScreen,bool isResizable);
+    int getDisplayWidth();
+    int getDisplayHeight();
+
 };
+
+AlDisplay::AlDisplay()
+{
+    flags=-1;
+}
+
+AlDisplay::~AlDisplay()
+{
+    if(display!=NULL)
+            al_destroy_display(display);
+}
+
+void AlDisplay::CreateDisplay(int w,int h)
+{
+        if(flags!=-1)
+            al_set_new_display_flags(flags);
+        display = al_create_display(w,h);
+}
+
+ void AlDisplay::SetWindowMode(bool isFullScreen,bool isResizable)
+ {
+     if(isFullScreen)
+            flags = ALLEGRO_FULLSCREEN;
+        else
+            flags = ALLEGRO_WINDOWED;
+
+    if(isResizable)
+            flags += ALLEGRO_RESIZABLE;
+ }
+
+int AlDisplay::getDisplayWidth()
+{
+    return al_get_display_width(display);
+}
+
+int AlDisplay::getDisplayHeight()
+{
+    return al_get_display_height(display);
+}

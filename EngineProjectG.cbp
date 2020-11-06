@@ -38,6 +38,7 @@
 			<Add directory="Allegro5/lib" />
 			<Add directory="Allegro5/include" />
 		</Compiler>
+		<Unit filename="AlAbstract/Entity.h" />
 		<Unit filename="AlClasses/AlConfig.h" />
 		<Unit filename="AlClasses/AlDisplay.h" />
 		<Unit filename="AlClasses/AlEventQueue.h" />
@@ -48,6 +49,8 @@
 		<Unit filename="AlClasses/AlMouse.h" />
 		<Unit filename="AlClasses/AlTimer.h" />
 		<Unit filename="Engine/Engine.h" />
+		<Unit filename="Engine/EntityContener.h" />
+		<Unit filename="Engine/StartUpConfig.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

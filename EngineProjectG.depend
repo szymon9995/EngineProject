@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1603926148 source:c:\project\engineprojectg\main.cpp
+1604327490 source:c:\project\engineprojectg\main.cpp
 	"Engine/Engine.h"
 	"AlClasses/AlInitAll.h"
 
@@ -313,7 +313,7 @@
 	"allegro5/allegro.h"
 	"allegro5/allegro_audio.h"
 
-1603926747 c:\project\engineprojectg\alclasses\aldisplay.h
+1604601800 c:\project\engineprojectg\alclasses\aldisplay.h
 	<allegro5/allegro.h>
 
 1603049888 c:\project\engineprojectg\alclasses\alimage.h
@@ -329,7 +329,7 @@
 1602972418 c:\project\engineprojectg\alclasses\altimer.h
 	<allegro5/allegro.h>
 
-1602941490 c:\project\engineprojectg\alclasses\aleventqueue.h
+1603985628 c:\project\engineprojectg\alclasses\aleventqueue.h
 	<allegro5/allegro.h>
 
 1603049279 c:\project\engineprojectg\alclasses\alkeyboard.h
@@ -343,7 +343,7 @@
 	<cstring>
 	<iostream>
 
-1603982516 c:\project\engineprojectg\engine\engine.h
+1604601813 c:\project\engineprojectg\engine\engine.h
 	<iostream>
 	<allegro5/allegro.h>
 	"../AlClasses/AlInitAll.h"
@@ -354,11 +354,12 @@
 	"../AlClasses/AlEventQueue.h"
 	"../AlClasses/AlKeyboard.h"
 	"../AlClasses/AlMouse.h"
+	"../AlClasses/AlDrawable.h"
 	"StartUpConfig.h"
 	"EntityContener.h"
 	"../Test/Test2.h"
 
-1603927314 c:\project\engineprojectg\engine\startupconfig.h
+1604597372 c:\project\engineprojectg\engine\startupconfig.h
 	"../AlClasses/AlConfig.h"
 
 1603979190 c:\project\engineprojectg\engine\drawablecontener.h
@@ -394,4 +395,9 @@
 1603982331 c:\project\engineprojectg\engine\entitycontener.h
 	"../AlAbstract/Entity.h"
 	<list>
+
+1604327446 c:\project\engineprojectg\alclasses\aldrawable.h
+	<allegro5/allegro.h>
+	<allegro5/allegro_primitives.h>
+	"AlImage.h"
 
