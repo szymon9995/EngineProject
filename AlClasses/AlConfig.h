@@ -16,6 +16,7 @@ public:
     void addConfigSection(std::string section_name);
 
     void setConfigValue(std::string section_name,std::string key,std::string value);
+    void setConfigValue(std::string section_name,std::string key,const char* value);
     void setConfigValue(std::string section_name,std::string key,int value);
     void setConfigValue(std::string section_name,std::string key,long value);
     void setConfigValue(std::string section_name,std::string key,double value);
@@ -61,6 +62,11 @@ void AlConfig::setConfigValue(std::string section_name,std::string key,std::stri
     al_set_config_value(config,section_name.c_str(),key.c_str(),value.c_str());
 }
 
+void AlConfig::setConfigValue(std::string section_name,std::string key,const char* value)
+{
+    al_set_config_value(config,section_name.c_str(),key.c_str(),value);
+}
+
 void AlConfig::setConfigValue(std::string section_name,std::string key,int value)
 {
     al_set_config_value(config,section_name.c_str(),key.c_str(),std::to_string(value).c_str());
@@ -84,6 +90,8 @@ void AlConfig::setConfigValue(std::string section_name,std::string key,bool valu
 std::string AlConfig::getConfigValue(std::string section_name,std::string key)
 {
     const char* tmp = al_get_config_value(config,section_name.c_str(),key.c_str());
+    if(tmp==NULL)
+        return "";
     std::string s_tmp = tmp;
     return s_tmp;
 }

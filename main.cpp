@@ -5,8 +5,7 @@ int main()
 {
 
     Engine engine;
-    engine.Test();
+    engine.Start();
 
     return 0;
 }
-

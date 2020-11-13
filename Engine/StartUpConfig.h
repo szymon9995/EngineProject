@@ -9,9 +9,13 @@ private:
     //Display
     int display_w;
     int display_h;
+    bool display_isFull;
+    bool display_isResizable;
 
     void LoadDisplayWidth();
     void LoadDisplayHeight();
+    void LoadDiplayMode();
+    void LoadDisplayIsResizable();
 
 public:
     StartUpConfig();
@@ -27,9 +31,15 @@ public:
     void setDefultDisplaySize();
     void setDisplaySize(int w,int h);
 
+    void setDefaultDisplayMode();
+    void setDisplayMode(bool isFullScreen);
+    void setDefaultDiplayIsResizable();
+    void setDiplayIsResizable(bool isResizable);
+
     int getDisplayWidth();
     int getDisplayHeight();
-
+    bool getDisplayMode();
+    bool getDisplayIsResizable();
 
 };
 
@@ -44,6 +54,8 @@ StartUpConfig::StartUpConfig()
     {
         LoadDisplayWidth();
         LoadDisplayHeight();
+        LoadDisplayIsResizable();
+        LoadDiplayMode();
     }
 }
 
@@ -57,6 +69,7 @@ StartUpConfig::~StartUpConfig()
 void StartUpConfig::LoadDisplayWidth()
 {
     std::string tmp = startup.getConfigValue("display","w");
+
     if(tmp.empty())
     {
         setDefaultDisplayWidth();
@@ -81,12 +94,38 @@ void StartUpConfig::LoadDisplayHeight()
     }
 }
 
+void StartUpConfig::LoadDiplayMode()
+{
+    std::string tmp = startup.getConfigValue("display","mode");
+    if(tmp.empty())
+        setDefaultDisplayMode();
+    if(tmp=="true")
+        display_isFull=true;
+    else
+        display_isFull=false;
+
+}
+
+void StartUpConfig::LoadDisplayIsResizable()
+{
+    std::string tmp = startup.getConfigValue("display","resizable");
+    if(tmp.empty())
+        setDefaultDiplayIsResizable();
+    else if(tmp=="true")
+        display_isResizable=true;
+    else
+        display_isResizable=false;
+}
+
 //Public
 //Default
 
 void StartUpConfig::createDeaultSettings()
 {
+    //Display
     setDefultDisplaySize();
+    setDefaultDisplayMode();
+    setDefaultDiplayIsResizable();
 }
 
 //Display
@@ -130,6 +169,33 @@ void StartUpConfig::setDisplaySize(int w,int h)
     startup.setConfigValue("display","h",h);
 }
 
+void StartUpConfig::setDefaultDisplayMode()
+{
+    display_isFull = false;
+    startup.setConfigValue("display","mode","false");
+}
+
+void StartUpConfig::setDisplayMode(bool isFullScreen)
+{
+     if(isFullScreen==false)
+        startup.setConfigValue("display","mode","false");
+    else
+        startup.setConfigValue("display","mode","true");
+}
+
+void StartUpConfig::setDefaultDiplayIsResizable()
+{
+    display_isResizable = false;
+    startup.setConfigValue("display","resizable","false");
+}
+void StartUpConfig::setDiplayIsResizable(bool isResizable)
+{
+    if(isResizable==false)
+        startup.setConfigValue("display","resizable","false");
+    else
+        startup.setConfigValue("display","resizable","true");
+}
+
 int StartUpConfig::getDisplayWidth()
 {
     return display_w;
@@ -138,4 +204,14 @@ int StartUpConfig::getDisplayWidth()
 int StartUpConfig::getDisplayHeight()
 {
     return display_h;
+}
+
+bool StartUpConfig::getDisplayMode()
+{
+    return display_isFull;
+}
+
+bool StartUpConfig::getDisplayIsResizable()
+{
+    return display_isResizable;
 }

@@ -15,6 +15,7 @@ public:
     void SetWindowMode(bool isFullScreen,bool isResizable);
     int getDisplayWidth();
     int getDisplayHeight();
+    ALLEGRO_EVENT_SOURCE* DisplayEvent();
 
 };
 
@@ -55,4 +56,9 @@ int AlDisplay::getDisplayWidth()
 int AlDisplay::getDisplayHeight()
 {
     return al_get_display_height(display);
+}
+
+ALLEGRO_EVENT_SOURCE* AlDisplay::DisplayEvent()
+{
+    return al_get_display_event_source(display);
 }

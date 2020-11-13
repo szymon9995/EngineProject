@@ -1,4 +1,5 @@
 #pragma once
+#include <stdarg.h>
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_primitives.h>
 #include "AlImage.h"
@@ -14,6 +15,7 @@ public:
         DARK_GREEN,LIME,
         LIGHT_BLUE,DARK_BLUE
     };
+
 private:
     static ALLEGRO_COLOR getColor(Color color);
     static ALLEGRO_COLOR getTransparentColor(Color color, int alpha);
@@ -22,7 +24,10 @@ public:
     static void drawImage(AlImage &image,int x,int y);
     static void drawScaledImage(AlImage &image,int x,int y,double scale);
 
-    static void drawFont(AlFont &font,int x,int y,std::string text);
+    static void drawFont(AlFont &font,Color color,int alpha,int x,int y,std::string text,...);
+    static void drawFont(AlFont &font,Color color,int x,int y,std::string text,...);
+    static void drawFont(AlFont &font,int r,int g,int b,int alpha,int x,int y,std::string text,...);
+    static void drawFont(AlFont &font,int r,int g,int b,int x,int y,std::string text,...);
 
     static void drawTransparentLine(int x,int y,int x2,int y2,int r,int g,int b,int alpha,int thickness);
     static void drawTransparentLine(int x,int y,int x2,int y2,Color color,int alpha,int thickness);
@@ -628,4 +633,38 @@ void AlDrawable::drawScaledImage(AlImage &image,int x,int y,double scale)
     float bitmat_width = al_get_bitmap_width(image.GetBitmap());
     float bitmat_height = al_get_bitmap_height(image.GetBitmap());
     al_draw_scaled_bitmap(image.GetBitmap(),0,0,bitmat_width,bitmat_height,x,y,bitmat_width*scale,bitmat_height*scale,0);
+}
+
+void AlDrawable::drawFont(AlFont &font,Color color,int alpha,int x,int y,std::string text,...)
+{
+    va_list va_l;
+    va_start(va_l,text);
+    al_draw_text(font.GetFont(),getTransparentColor(color,alpha),x,y,ALLEGRO_ALIGN_CENTER,text.c_str());
+
+    va_end(va_l);
+}
+
+void AlDrawable::drawFont(AlFont &font,Color color,int x,int y,std::string text,...)
+{
+    va_list va_l;
+    va_start(va_l,text);
+    al_draw_text(font.GetFont(),getColor(color),x,y,ALLEGRO_ALIGN_CENTER,text.c_str());
+
+    va_end(va_l);
+}
+
+void AlDrawable::drawFont(AlFont &font,int r,int g,int b,int alpha,int x,int y,std::string text,...)
+{
+    va_list va_l;
+    va_start(va_l,text);
+    al_draw_text(font.GetFont(),al_map_rgba(r,g,b,alpha),x,y,ALLEGRO_ALIGN_CENTER,text.c_str());
+    va_end(va_l);
+}
+
+void AlDrawable::drawFont(AlFont &font,int r,int g,int b,int x,int y,std::string text,...)
+{
+    va_list va_l;
+    va_start(va_l,text);
+    al_draw_text(font.GetFont(),al_map_rgb(r,g,b),x,y,ALLEGRO_ALIGN_CENTER,text.c_str());
+    va_end(va_l);
 }

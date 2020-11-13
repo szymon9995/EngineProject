@@ -13,7 +13,7 @@ public:
 
     void Update();
     void Draw();
-    void Register(Entity& entity);
+    void Register(Entity* entity);
 
     
 };
@@ -44,7 +44,7 @@ void EntityContener::Draw()
     }
 }
 
-void EntityContener::Register(Entity& entity)
+void EntityContener::Register(Entity *entity)
 {
-    content.push_back(&entity);
+    content.push_back(entity);
 }

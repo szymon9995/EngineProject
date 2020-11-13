@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1604327490 source:c:\project\engineprojectg\main.cpp
+1605215164 source:c:\project\engineprojectg\main.cpp
 	"Engine/Engine.h"
 	"AlClasses/AlInitAll.h"
 
@@ -313,7 +313,7 @@
 	"allegro5/allegro.h"
 	"allegro5/allegro_audio.h"
 
-1604601800 c:\project\engineprojectg\alclasses\aldisplay.h
+1605219257 c:\project\engineprojectg\alclasses\aldisplay.h
 	<allegro5/allegro.h>
 
 1603049888 c:\project\engineprojectg\alclasses\alimage.h
@@ -326,24 +326,25 @@
 	<allegro5/allegro_font.h>
 	<iostream>
 
-1602972418 c:\project\engineprojectg\alclasses\altimer.h
+1605225594 c:\project\engineprojectg\alclasses\altimer.h
 	<allegro5/allegro.h>
 
-1603985628 c:\project\engineprojectg\alclasses\aleventqueue.h
+1605219769 c:\project\engineprojectg\alclasses\aleventqueue.h
 	<allegro5/allegro.h>
 
-1603049279 c:\project\engineprojectg\alclasses\alkeyboard.h
+1605111952 c:\project\engineprojectg\alclasses\alkeyboard.h
+	<allegro5/allegro.h>
+	<allegro5/keycodes.h>
+
+1605111926 c:\project\engineprojectg\alclasses\almouse.h
 	<allegro5/allegro.h>
 
-1603027583 c:\project\engineprojectg\alclasses\almouse.h
-	<allegro5/allegro.h>
-
-1603927934 c:\project\engineprojectg\alclasses\alconfig.h
+1605138873 c:\project\engineprojectg\alclasses\alconfig.h
 	<allegro5/allegro.h>
 	<cstring>
 	<iostream>
 
-1604601813 c:\project\engineprojectg\engine\engine.h
+1605228607 c:\project\engineprojectg\engine\engine.h
 	<iostream>
 	<allegro5/allegro.h>
 	"../AlClasses/AlInitAll.h"
@@ -357,9 +358,11 @@
 	"../AlClasses/AlDrawable.h"
 	"StartUpConfig.h"
 	"EntityContener.h"
+	"../Editables/RegisterEntities.h"
 	"../Test/Test2.h"
+	"../Enitites/Player/Player.h"
 
-1604597372 c:\project\engineprojectg\engine\startupconfig.h
+1605139124 c:\project\engineprojectg\engine\startupconfig.h
 	"../AlClasses/AlConfig.h"
 
 1603979190 c:\project\engineprojectg\engine\drawablecontener.h
@@ -375,10 +378,14 @@
 
 1603972523 c:\project\engineprojectg\engine\drawable.h
 
-1603982507 c:\project\engineprojectg\test\test2.h
+1605220200 c:\project\engineprojectg\test\test2.h
 	"../AlAbstract/Entity.h"
 	<allegro5/allegro.h>
 	<allegro5/allegro_primitives.h>
+	"../AlClasses/AlDrawable.h"
+	"../AlClasses/AlFont.h"
+	"../AlClasses/AlMouse.h"
+	"../AlClasses/AlKeyboard.h"
 
 1603974291 c:\project\engineprojectg\engine\drawableobject.h
 
@@ -390,14 +397,41 @@
 
 1603976746 c:\project\engineprojectg\alabstract\drawableobject.h
 
-1603981477 c:\project\engineprojectg\alabstract\entity.h
+1605201001 c:\project\engineprojectg\alabstract\entity.h
 
-1603982331 c:\project\engineprojectg\engine\entitycontener.h
+1605228723 c:\project\engineprojectg\engine\entitycontener.h
 	"../AlAbstract/Entity.h"
 	<list>
 
-1604327446 c:\project\engineprojectg\alclasses\aldrawable.h
+1605225026 c:\project\engineprojectg\alclasses\aldrawable.h
+	<stdarg.h>
 	<allegro5/allegro.h>
 	<allegro5/allegro_primitives.h>
 	"AlImage.h"
+
+1605259745 c:\project\engineprojectg\enitites\player\player.h
+	"../../AlAbstract/Entity.h"
+	"../../AlClasses/AlKeyboard.h"
+	"../../AlClasses/AlDrawable.h"
+
+1605259762 c:\project\engineprojectg\editables\registerentities.h
+	"../Engine/EntityContener.h"
+	"../AlAbstract/Entity.h"
+	"../Enitites/Player/Player.h"
+	"../Enitites/Enemies/EnemyTest.h"
+	"../Enitites/Tiles/GrassTile.h"
+	"../Test/Test2.h"
+
+1605258879 c:\project\engineprojectg\enitites\enemies\enemytest.h
+	"../../AlAbstract/Entity.h"
+	"../../AlClasses/AlKeyboard.h"
+	"../../AlClasses/AlDrawable.h"
+
+1605259108 c:\project\engineprojectg\enitites\tiles\grasstile.h
+	"../../AlAbstract/Entity.h"
+	"../../AlAbstract/Tile.h"
+	"../../AlClasses/AlDrawable.h"
+
+1605201064 c:\project\engineprojectg\alabstract\tile.h
+	"Entity.h"
 

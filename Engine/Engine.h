@@ -15,7 +15,10 @@
 #include "StartUpConfig.h"
 #include "EntityContener.h"
 
+#include "../Editables/RegisterEntities.h"
+
 #include "../Test/Test2.h"
+#include "../Enitites/Player/Player.h"
 
 class Engine
 {
@@ -24,19 +27,18 @@ private:
 
     AlDisplay display;
     StartUpConfig strartup;
-    AlMouse mouse;
-    AlKeyboard keyboard;
     EntityContener contener;
 
 
     void LoadStartUp();
     void UpdateDisplay();
+
+    void InitDisplay();
 public:
     Engine();
     ~Engine();
 
     void Start();
-    void Test();
 };
 
 //Constructors Destructors
@@ -54,6 +56,12 @@ Engine::Engine()
     canBeStarted=true;
 }
 
+void Engine::InitDisplay()
+{
+    display.SetWindowMode(strartup.getDisplayMode(),strartup.getDisplayIsResizable());
+    display.CreateDisplay(strartup.getDisplayWidth(),strartup.getDisplayHeight());   
+}
+
 Engine::~Engine()
 {
 }
@@ -63,7 +71,7 @@ Engine::~Engine()
 void Engine::UpdateDisplay()
 {
     al_clear_to_color(al_map_rgb(0, 0, 0));
-
+    contener.Draw();
     al_flip_display();
 }
 //Public
@@ -73,87 +81,31 @@ void Engine::Start()
     if(!canBeStarted)
         return;
     bool exit = false;
+    
+    InitDisplay();
+
     AlTimer timer_fps(1.0/60);
-
-    display.CreateDisplay(strartup.getDisplayWidth(),strartup.getDisplayHeight());
-
     AlEventQueue main_queue;
     main_queue.Register(timer_fps.TimerEvent());
+    main_queue.Register(display.DisplayEvent());
+
+    //
+    AlFont font;
+    //
+    RegisterEntities(contener);
 
     timer_fps.Start();
     while(!exit)
     {
+        AlMouse::updateMouse();
+        AlKeyboard::UpdateKeyboard();
+        main_queue.WaitFEvt();
 
-    }
-}
-
-void Engine::Test()
-{
-    if(!canBeStarted)
-        return;
-    display.SetWindowMode(false,true);
-    display.CreateDisplay(strartup.getDisplayWidth(),strartup.getDisplayHeight());
-
-    //robienie image (dodac lepsze postepowanie kiedy nie mozna zaladowac obrazu)
-    AlImage image=AlImage("images/test.png");
-
-    //ladowanie fonta automatycznego
-    AlFont font = AlFont();
-    //oraz comic sans fonta
-    AlFont comic_sans_font("fonts/comic.ttf",16,1);
-
-    //timer (pamietac dodac wyjatek przzy tworzeniu jezeli czas jest rowny 0)
-    AlTimer timer_draw = AlTimer(1.0/20);
-    AlTimer timer_tmp =AlTimer(5.0);
-
-    //Tworzy kolejke wydarzen
-    AlEventQueue main_queue;
-    main_queue.Register(timer_draw.TimerEvent());
-    main_queue.Register(timer_tmp.TimerEvent());
-
-    
-    bool exit = false;
-
-    ALLEGRO_EVENT event_al;
-
-    Test2 test = Test2();
-    contener.Register(test);
-
-    timer_draw.Start();
-    timer_tmp.Start();
-
-    while(!exit)
-    {
-        al_clear_to_color(al_map_rgb(0, 0, 0));
-        /*
-        al_draw_bitmap(image.GetBitmap(),20,20,0);
-
-        al_draw_text(comic_sans_font.GetFont(),al_map_rgb(255,255,0),400,400,ALLEGRO_ALIGN_CENTER,"Test Comic!");
-        comic_sans_font.DrawText(al_map_rgb(255,255,0),400,400,ALLEGRO_ALIGN_CENTER,"Test Comic!");
-        al_draw_text(font.GetFont(),al_map_rgb(255,255,0),400,500,ALLEGRO_ALIGN_CENTER,"Test Default!");
-*/
-        AlDrawable::drawLine(0,0,display.getDisplayWidth(),display.getDisplayHeight(),AlDrawable::RED,3);
-        //AlDrawable::drawImage(image,250,250);
-        AlDrawable::drawScaledImage(image,250,250,0.5);
-         al_draw_textf(font.GetFont(),al_map_rgb(255,255,0),400,500,ALLEGRO_ALIGN_CENTER,"Amount:%d",0);
-        contener.Draw();
         contener.Update();
+        if(main_queue.IsEventSource(timer_fps.TimerEvent()))
+            UpdateDisplay();
 
-        main_queue.WaitFEvt(&event_al);
-
-        if(event_al.type == ALLEGRO_EVENT_TIMER)
-		{
-			if(event_al.timer.source == timer_tmp.GetTimer())
-			{
-				exit=true;
-			}
-            if(event_al.timer.source == timer_draw.GetTimer())
-            {
-                mouse.updateMouse();
-                std::cout<<"Mouse x:"<<mouse.getMouseX()<<" y:"<<mouse.getMouseY()<<std::endl;
-            }
-		}
-
-        al_flip_display();
+        if(AlKeyboard::isKeyPressed(ALLEGRO_KEY_ESCAPE) || main_queue.IsEventType(ALLEGRO_EVENT_DISPLAY_CLOSE))
+            exit=true;
     }
 }

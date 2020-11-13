@@ -4,7 +4,7 @@
 class AlMouse
 {
 private:
-    ALLEGRO_MOUSE_STATE mouse;
+    static ALLEGRO_MOUSE_STATE mouse;
 public:
     enum Button
     {
@@ -17,11 +17,13 @@ public:
         R_L_MClick=7
         ////////////////
     };
-    void updateMouse();
-    int getMouseX();
-    int getMouseY();
-    int getButton();
+    static void updateMouse();
+    static int getMouseX();
+    static int getMouseY();
+    static int getButton();
 };
+
+ALLEGRO_MOUSE_STATE AlMouse::mouse;
 
 void AlMouse::updateMouse()
 {
