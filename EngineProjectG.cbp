@@ -39,18 +39,25 @@
 			<Add directory="Allegro5/include" />
 		</Compiler>
 		<Unit filename="AlAbstract/Entity.h" />
+		<Unit filename="AlAbstract/Tile.h" />
+		<Unit filename="AlClasses/AlCond.h" />
 		<Unit filename="AlClasses/AlConfig.h" />
 		<Unit filename="AlClasses/AlDisplay.h" />
+		<Unit filename="AlClasses/AlDrawable.h" />
 		<Unit filename="AlClasses/AlEventQueue.h" />
 		<Unit filename="AlClasses/AlFont.h" />
 		<Unit filename="AlClasses/AlImage.h" />
 		<Unit filename="AlClasses/AlInitAll.h" />
 		<Unit filename="AlClasses/AlKeyboard.h" />
 		<Unit filename="AlClasses/AlMouse.h" />
+		<Unit filename="AlClasses/AlMutex.h" />
+		<Unit filename="AlClasses/AlThread.h" />
 		<Unit filename="AlClasses/AlTimer.h" />
 		<Unit filename="Engine/Engine.h" />
 		<Unit filename="Engine/EntityContener.h" />
 		<Unit filename="Engine/StartUpConfig.h" />
+		<Unit filename="Enitites/Player/Player.h" />
+		<Unit filename="Enitites/Tiles/GrassTile.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
