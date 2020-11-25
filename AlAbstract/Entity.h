@@ -2,14 +2,8 @@
 
 class Entity
 {
-protected:
-int x;
-int y;
-int w;
-int h;
-    
 public:
-    virtual ~Entity() {};
-    virtual void draw() {};
-    virtual void update() {};
+    virtual ~Entity() {};//wirtualny dekonstruktor klasy Entity
+    virtual void draw() {};//wirtualna metoda sluzaca do rysowania
+    virtual void update() {};//wirtualna metoda sluzaca do aktualizacji danych
 };

@@ -1,40 +1,17 @@
 #pragma once
-#include <allegro5/allegro.h>
 
-class AlThread
+typedef struct ALLEGRO_THREAD ALLEGRO_THREAD;
+
+class AlThread//kalsa do trzymania watka
 {
 private:
     ALLEGRO_THREAD *thread;
 public:
-    void start();
-    void join(void **ret_value);
-    void tell_to_stop();
-    bool should_stop();
+    void start();//zaczecie watku
+    void join(void **ret_value);//funkcja 'joinujaca' watek, wraca go do glownego procesu
+    void tell_to_stop();//funcka mowiaca watkowi by sie zatrzymal
+    bool should_stop();//funckja sprawdzajaca czy watek powinnien sie zatrzymac
 
-    AlThread(void *(*proc)(ALLEGRO_THREAD *thread, void *arg), void *arg);
-    ~AlThread();
+    AlThread(void *(*proc)(ALLEGRO_THREAD *thread, void *arg), void *arg);//konstruktor watku
+    ~AlThread();//destruktor watku
 };
-
-void AlThread::start() {
-    al_start_thread(thread);
-}
-
-void AlThread::join(void **ret_value) {
-    al_join_thread(thread,ret_value);
-}
-
-void AlThread::tell_to_stop() {
-    al_set_thread_should_stop(thread);
-}
-
-bool AlThread::should_stop() {
-    return al_get_thread_should_stop(thread);
-}
-
-AlThread::AlThread(void *(*proc)(ALLEGRO_THREAD *thread, void *arg), void *arg) {
-    thread = al_create_thread(proc,arg);
-}
-
-AlThread::~AlThread() {
-    al_destroy_thread(thread);
-}

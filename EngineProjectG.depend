@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1605215164 source:c:\project\engineprojectg\main.cpp
+1605806989 source:c:\project\engineprojectg\main.cpp
 	"Engine/Engine.h"
 	"AlClasses/AlInitAll.h"
 
@@ -284,13 +284,7 @@
 
 1553403848 c:\project\engineprojectg\allegro5\include\allegro5\alcompat.h
 
-1602682786 c:\project\engineprojectg\alclasses\alinitall.h
-	<allegro5/allegro.h>
-	<allegro5/allegro_primitives.h>
-	<allegro5/allegro_image.h>
-	<allegro5/allegro_ttf.h>
-	<allegro5/allegro_audio.h>
-	<allegro5/allegro_acodec.h>
+1606316200 c:\project\engineprojectg\alclasses\alinitall.h
 	<iostream>
 
 1553403849 c:\project\engineprojectg\allegro5\include\allegro5\allegro_primitives.h
@@ -313,38 +307,35 @@
 	"allegro5/allegro.h"
 	"allegro5/allegro_audio.h"
 
-1605219257 c:\project\engineprojectg\alclasses\aldisplay.h
-	<allegro5/allegro.h>
+1606316116 c:\project\engineprojectg\alclasses\aldisplay.h
 
-1603049888 c:\project\engineprojectg\alclasses\alimage.h
+1606316179 c:\project\engineprojectg\alclasses\alimage.h
 	<iostream>
 	<cstring>
 	<allegro5/allegro.h>
 
-1603883065 c:\project\engineprojectg\alclasses\alfont.h
+1606316163 c:\project\engineprojectg\alclasses\alfont.h
 	<allegro5/allegro.h>
 	<allegro5/allegro_font.h>
+	<allegro5/allegro_ttf.h>
 	<iostream>
+	<stdarg.h>
+	"Color.h"
 
-1605225594 c:\project\engineprojectg\alclasses\altimer.h
+1606316243 c:\project\engineprojectg\alclasses\altimer.h
+
+1606316147 c:\project\engineprojectg\alclasses\aleventqueue.h
 	<allegro5/allegro.h>
 
-1605219769 c:\project\engineprojectg\alclasses\aleventqueue.h
-	<allegro5/allegro.h>
-
-1605111952 c:\project\engineprojectg\alclasses\alkeyboard.h
-	<allegro5/allegro.h>
+1606316208 c:\project\engineprojectg\alclasses\alkeyboard.h
 	<allegro5/keycodes.h>
 
-1605111926 c:\project\engineprojectg\alclasses\almouse.h
-	<allegro5/allegro.h>
+1606316220 c:\project\engineprojectg\alclasses\almouse.h
 
-1605138873 c:\project\engineprojectg\alclasses\alconfig.h
-	<allegro5/allegro.h>
-	<cstring>
+1606316097 c:\project\engineprojectg\alclasses\alconfig.h
 	<iostream>
 
-1605228607 c:\project\engineprojectg\engine\engine.h
+1606314249 c:\project\engineprojectg\engine\engine.h
 	<iostream>
 	<allegro5/allegro.h>
 	"../AlClasses/AlInitAll.h"
@@ -357,12 +348,9 @@
 	"../AlClasses/AlMouse.h"
 	"../AlClasses/AlDrawable.h"
 	"StartUpConfig.h"
-	"EntityContener.h"
-	"../Editables/RegisterEntities.h"
-	"../Test/Test2.h"
-	"../Enitites/Player/Player.h"
+	"SceneManager.h"
 
-1605139124 c:\project\engineprojectg\engine\startupconfig.h
+1606170403 c:\project\engineprojectg\engine\startupconfig.h
 	"../AlClasses/AlConfig.h"
 
 1603979190 c:\project\engineprojectg\engine\drawablecontener.h
@@ -378,14 +366,14 @@
 
 1603972523 c:\project\engineprojectg\engine\drawable.h
 
-1605220200 c:\project\engineprojectg\test\test2.h
+1606172694 c:\project\engineprojectg\test\test2.h
 	"../AlAbstract/Entity.h"
-	<allegro5/allegro.h>
-	<allegro5/allegro_primitives.h>
 	"../AlClasses/AlDrawable.h"
 	"../AlClasses/AlFont.h"
 	"../AlClasses/AlMouse.h"
 	"../AlClasses/AlKeyboard.h"
+	"../AlClasses/AlImage.h"
+	<stdio.h>
 
 1603974291 c:\project\engineprojectg\engine\drawableobject.h
 
@@ -397,41 +385,207 @@
 
 1603976746 c:\project\engineprojectg\alabstract\drawableobject.h
 
-1605201001 c:\project\engineprojectg\alabstract\entity.h
+1606172609 c:\project\engineprojectg\alabstract\entity.h
 
-1605228723 c:\project\engineprojectg\engine\entitycontener.h
+1606314639 c:\project\engineprojectg\engine\entitycontener.h
 	"../AlAbstract/Entity.h"
 	<list>
 
-1605225026 c:\project\engineprojectg\alclasses\aldrawable.h
+1606316134 c:\project\engineprojectg\alclasses\aldrawable.h
 	<stdarg.h>
-	<allegro5/allegro.h>
-	<allegro5/allegro_primitives.h>
-	"AlImage.h"
+	"Color.h"
+	<iostream>
 
-1605259745 c:\project\engineprojectg\enitites\player\player.h
+1606318488 c:\project\engineprojectg\enitites\player\player.h
 	"../../AlAbstract/Entity.h"
 	"../../AlClasses/AlKeyboard.h"
 	"../../AlClasses/AlDrawable.h"
+	"../../AlClasses/AlFont.h"
+	"../../Type/FloatRect.h"
 
-1605259762 c:\project\engineprojectg\editables\registerentities.h
+1606223336 c:\project\engineprojectg\editables\registerentities.h
 	"../Engine/EntityContener.h"
 	"../AlAbstract/Entity.h"
 	"../Enitites/Player/Player.h"
 	"../Enitites/Enemies/EnemyTest.h"
-	"../Enitites/Tiles/GrassTile.h"
 	"../Test/Test2.h"
 
-1605258879 c:\project\engineprojectg\enitites\enemies\enemytest.h
+1606255594 c:\project\engineprojectg\enitites\enemies\enemytest.h
 	"../../AlAbstract/Entity.h"
 	"../../AlClasses/AlKeyboard.h"
 	"../../AlClasses/AlDrawable.h"
 
-1605259108 c:\project\engineprojectg\enitites\tiles\grasstile.h
-	"../../AlAbstract/Entity.h"
-	"../../AlAbstract/Tile.h"
+1606223112 c:\project\engineprojectg\enitites\tiles\grasstile.h
+	"Tile.h"
 	"../../AlClasses/AlDrawable.h"
+	"../Player/Player.h"
 
 1605201064 c:\project\engineprojectg\alabstract\tile.h
 	"Entity.h"
+
+1606316251 c:\project\engineprojectg\alclasses\color.h
+
+1606316074 source:c:\project\engineprojectg\alclasses\alconfig.cpp
+	"AlConfig.h"
+	<allegro5/allegro.h>
+	<cstring>
+
+1606079521 source:c:\project\engineprojectg\alclasses\alcond.cpp
+	"AlCond.h"
+	<allegro5/allegro.h>
+	"AlMutex.h"
+
+1606315173 c:\project\engineprojectg\alclasses\alcond.h
+
+1606084892 c:\project\engineprojectg\alclasses\almutex.h
+
+1606079803 source:c:\project\engineprojectg\alclasses\aldisplay.cpp
+	"AlDisplay.h"
+	<allegro5/allegro.h>
+
+1606156159 source:c:\project\engineprojectg\alclasses\aldrawable.cpp
+	"AlDrawable.h"
+	"Color.cpp"
+	<allegro5/allegro.h>
+	<allegro5/allegro_primitives.h>
+	"AlImage.h"
+	"AlFont.h"
+
+1606082706 source:c:\project\engineprojectg\alclasses\aleventqueue.cpp
+	"AlEventQueue.h"
+
+1606156086 source:c:\project\engineprojectg\alclasses\alfont.cpp
+	"AlFont.h"
+	"Color.cpp"
+
+1606156069 c:\project\engineprojectg\alclasses\color.cpp
+	"Color.h"
+	<allegro5/allegro.h>
+
+1606156069 source:c:\project\engineprojectg\alclasses\color.cpp
+	"Color.h"
+	<allegro5/allegro.h>
+
+1606084695 source:c:\project\engineprojectg\alclasses\altimer.cpp
+	"AlTimer.h"
+	<allegro5/allegro.h>
+
+1606084787 source:c:\project\engineprojectg\alclasses\althread.cpp
+	"AlThread.h"
+	<allegro5/allegro.h>
+
+1606316231 c:\project\engineprojectg\alclasses\althread.h
+
+1606084958 source:c:\project\engineprojectg\alclasses\almouse.cpp
+	"AlMouse.h"
+	<allegro5/allegro.h>
+
+1606084867 source:c:\project\engineprojectg\alclasses\almutex.cpp
+	"AlMutex.h"
+	<allegro5/allegro.h>
+
+1606310200 source:c:\project\engineprojectg\alclasses\alkeyboard.cpp
+	"AlKeyboard.h"
+	<allegro5/allegro.h>
+
+1606085235 source:c:\project\engineprojectg\alclasses\alinitall.cpp
+	"AlInitAll.h"
+	<allegro5/allegro.h>
+	<allegro5/allegro_primitives.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_ttf.h>
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+
+1606153464 source:c:\project\engineprojectg\alclasses\alimage.cpp
+	"AlImage.h"
+
+1606314701 source:c:\project\engineprojectg\engine\entitycontener.cpp
+	"EntityContener.h"
+
+1606170526 source:c:\project\engineprojectg\engine\startupconfig.cpp
+	"StartUpConfig.h"
+
+1606317482 c:\project\engineprojectg\engine\scenemanager.h
+	"EntityContener.h"
+	"../AlAbstract/Scene.h"
+	"../Scenes/TestScene.h"
+	<map>
+
+1606314753 c:\project\engineprojectg\alabstract\scene.h
+
+1606315023 c:\project\engineprojectg\scenes\testscene.h
+	"../AlAbstract/Scene.h"
+	"../Enitites/Player/Player.h"
+	"../Engine/EntityContener.h"
+	"../Enitites/Tiles/Tile.h"
+	"../Enitites/Enemies/EnemyBat.h"
+	"../Enitites/Enemies/EnemyZombie.h"
+	"../Enitites/UI/HpBar.h"
+
+1606315886 c:\project\engineprojectg\type\floatrect.h
+
+1606251107 c:\project\engineprojectg\enitites\tiles\tile.h
+	"../../AlAbstract/Entity.h"
+	"../Player/Player.h"
+	"../../Type/FloatRect.h"
+	"../../AlClasses/AlDrawable.h"
+
+1606179860 source:c:\project\engineprojectg\type\floatrect.cpp
+	"FloatRect.h"
+
+1606267932 source:c:\project\engineprojectg\enitites\tiles\tile.cpp
+	"Tile.h"
+
+1606315047 source:c:\project\engineprojectg\scenes\testscene.cpp
+	"TestScene.h"
+
+1606317766 source:c:\project\engineprojectg\engine\scenemanager.cpp
+	"SceneManager.h"
+
+1606301026 source:c:\project\engineprojectg\enitites\player\player.cpp
+	"Player.h"
+
+1606256637 c:\project\engineprojectg\enitites\enemies\enemycharger.h
+	"../../AlAbstract/Entity.h"
+	"../Player/Player.h"
+	"../../Type/FloatRect.h"
+	"../../AlClasses/AlDrawable.h"
+
+1606258055 source:c:\project\engineprojectg\enitites\enemies\enemycharger.cpp
+	"EnemyCharger.h"
+	<math.h>
+
+1606316260 c:\project\engineprojectg\enitites\enemies\enemybat.h
+	"../../AlAbstract/Entity.h"
+	"../Player/Player.h"
+	"../../Type/FloatRect.h"
+	"../../AlClasses/AlDrawable.h"
+	"../../AlClasses/AlImage.h"
+
+1606269300 source:c:\project\engineprojectg\enitites\enemies\enemybat.cpp
+	"EnemyBat.h"
+	<math.h>
+
+1606299883 c:\project\engineprojectg\enitites\ui\hpbar.h
+	"../../AlAbstract/Entity.h"
+	"../Player/Player.h"
+	"../../AlClasses/AlDrawable.h"
+	"../../AlClasses/AlFont.h"
+
+1606302067 source:c:\project\engineprojectg\enitites\ui\hpbar.cpp
+	"HpBar.h"
+
+1606316270 c:\project\engineprojectg\enitites\enemies\enemyzombie.h
+	"../../AlAbstract/Entity.h"
+	"../../Type/FloatRect.h"
+	"../../AlClasses/AlDrawable.h"
+	"../../AlClasses/AlImage.h"
+	"../Player/Player.h"
+
+1606310702 source:c:\project\engineprojectg\enitites\enemies\enemyzombie.cpp
+	"EnemyZombie.h"
+
+1606314295 source:c:\project\engineprojectg\engine\engine.cpp
+	"Engine.h"
 

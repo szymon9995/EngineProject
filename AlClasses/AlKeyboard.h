@@ -1,37 +1,16 @@
 #pragma once
-#include <allegro5/allegro.h>
 #include <allegro5/keycodes.h>
 
-class AlKeyboard
+typedef struct ALLEGRO_KEYBOARD_STATE ALLEGRO_KEYBOARD_STATE;
+
+class AlKeyboard//kalsa do czytania klawiatury
 {
 private:
     static ALLEGRO_KEYBOARD_STATE keyboard;
 public:
-    static void UpdateKeyboard();
-    static ALLEGRO_KEYBOARD_STATE GetKeyboard();
-    static ALLEGRO_KEYBOARD_STATE* GetKeyboardAdress();
+    static void UpdateKeyboard();//aktualizacja klawiatury
+    static ALLEGRO_KEYBOARD_STATE GetKeyboard();//dostatnie stanu klawiatury
+    static ALLEGRO_KEYBOARD_STATE* GetKeyboardAdress();//dostanie adresu na stan klawiatury
 
-    static bool isKeyPressed(int key);
+    static bool isKeyPressed(int key);//spawdzenie czy guzik jest nacisniety
 };
-
-ALLEGRO_KEYBOARD_STATE AlKeyboard::keyboard;
-
-void AlKeyboard::UpdateKeyboard()
-{
-    al_get_keyboard_state(&keyboard);
-}
-
-ALLEGRO_KEYBOARD_STATE AlKeyboard::GetKeyboard()
-{
-    return keyboard;
-}
-
-ALLEGRO_KEYBOARD_STATE* AlKeyboard::GetKeyboardAdress()
-{
-    return &keyboard;
-}
-
-bool AlKeyboard::isKeyPressed(int key)
-{
-    return al_key_down(&keyboard,key);
-}

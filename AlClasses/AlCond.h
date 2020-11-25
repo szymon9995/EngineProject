@@ -1,6 +1,7 @@
 #pragma once
-#include <allegro5/allegro.h>
-#include "AlMutex.h"
+
+typedef struct ALLEGRO_COND ALLEGRO_COND;
+typedef class AlMutex AlMutex;
 
 class AlCond {
 private:
@@ -13,23 +14,3 @@ public:
     void broadcast();
     void signal();
 };
-
-AlCond::AlCond() {
-    cond = al_create_cond();
-}
-
-AlCond::~AlCond() {
-    al_destroy_cond(cond);
-}
-
-void AlCond::wait(AlMutex mutex) {
-    al_wait_cond(cond, mutex.getMutex());
-}
-
-void AlCond::broadcast() {
-    al_broadcast_cond(cond);
-}
-
-void AlCond::signal() {
-    al_signal_cond(cond);
-}

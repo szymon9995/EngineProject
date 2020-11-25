@@ -1,64 +1,22 @@
 #pragma once
-#include <allegro5/allegro.h>
 
-class AlDisplay
+typedef struct ALLEGRO_DISPLAY ALLEGRO_DISPLAY;
+typedef struct ALLEGRO_EVENT_SOURCE ALLEGRO_EVENT_SOURCE;
+
+class AlDisplay//klasa do przetrzymywania ekranu 
 {
 private:    
     ALLEGRO_DISPLAY *display;
     int flags;
 public:
 
-    AlDisplay();
-    ~AlDisplay();
+    AlDisplay();//komstruktor ekranu
+    ~AlDisplay();//dekonstruktor ekranu
 
-    void CreateDisplay(int w,int h);
-    void SetWindowMode(bool isFullScreen,bool isResizable);
-    int getDisplayWidth();
-    int getDisplayHeight();
-    ALLEGRO_EVENT_SOURCE* DisplayEvent();
+    void CreateDisplay(int w,int h);//ustawienie rozmiarow ekranu 
+    void SetWindowMode(bool isFullScreen,bool isResizable);//ustawienie czy ekran ma byc pelnoekranowy i byc rozszezany
+    int getDisplayWidth();//dostanie szerokosci ekranu
+    int getDisplayHeight();//dostanie wysokosci ekranu
+    ALLEGRO_EVENT_SOURCE* DisplayEvent();//dotsnie zrodla wydarzenia ekranu
 
 };
-
-AlDisplay::AlDisplay()
-{
-    flags=-1;
-}
-
-AlDisplay::~AlDisplay()
-{
-    if(display!=NULL)
-            al_destroy_display(display);
-}
-
-void AlDisplay::CreateDisplay(int w,int h)
-{
-        if(flags!=-1)
-            al_set_new_display_flags(flags);
-        display = al_create_display(w,h);
-}
-
- void AlDisplay::SetWindowMode(bool isFullScreen,bool isResizable)
- {
-     if(isFullScreen)
-            flags = ALLEGRO_FULLSCREEN;
-        else
-            flags = ALLEGRO_WINDOWED;
-
-    if(isResizable)
-            flags += ALLEGRO_RESIZABLE;
- }
-
-int AlDisplay::getDisplayWidth()
-{
-    return al_get_display_width(display);
-}
-
-int AlDisplay::getDisplayHeight()
-{
-    return al_get_display_height(display);
-}
-
-ALLEGRO_EVENT_SOURCE* AlDisplay::DisplayEvent()
-{
-    return al_get_display_event_source(display);
-}

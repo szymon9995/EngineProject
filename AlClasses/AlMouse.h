@@ -1,7 +1,8 @@
 #pragma once
-#include <allegro5/allegro.h>
 
-class AlMouse
+typedef struct ALLEGRO_MOUSE_STATE ALLEGRO_MOUSE_STATE;
+
+class AlMouse//klasa do czytania myszki
 {
 private:
     static ALLEGRO_MOUSE_STATE mouse;
@@ -17,30 +18,8 @@ public:
         R_L_MClick=7
         ////////////////
     };
-    static void updateMouse();
-    static int getMouseX();
-    static int getMouseY();
-    static int getButton();
+    static void updateMouse();//auktualizacja myszki
+    static int getMouseX();//dostanie wpolrzednych x myszki
+    static int getMouseY();//dostanie wsporzednych y myszki
+    static int getButton();//dostanie numer zacisietego guzika
 };
-
-ALLEGRO_MOUSE_STATE AlMouse::mouse;
-
-void AlMouse::updateMouse()
-{
-    al_get_mouse_state(&mouse);
-}
-
-int AlMouse::getMouseX()
-{
-    return mouse.x;
-}
-
-int AlMouse::getMouseY()
-{
-    return mouse.y;
-}
-
-int AlMouse::getButton()
-{
-    return mouse.buttons;
-}

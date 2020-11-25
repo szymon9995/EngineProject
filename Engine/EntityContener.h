@@ -6,45 +6,14 @@
 class EntityContener
 {
 private:
-    std::list<Entity *> content;
+    std::list<Entity *> content;//przechowywacz wskanizkow na obiekty Entity
 public:
-    EntityContener();
-    ~EntityContener();
+    EntityContener();//konstruktor kontenera
+    ~EntityContener();//dekonstruktor kontenera
 
-    void Update();
-    void Draw();
-    void Register(Entity* entity);
-
+    void Update();//aktualizacja wszysrkich enityty
+    void Draw();//rysowanie wszystkich Enitity
+    void Register(Entity* entity);//Rejestracja Entity (przez wskaznik)
+    void Unload();//odładowywanie obiektow Entity
     
 };
-
-EntityContener::EntityContener()
-{
-}
-
-EntityContener::~EntityContener()
-{
-}
-
-void EntityContener::Update()
-{
-    for (std::list<Entity *>::iterator it=content.begin(); it != content.end(); ++it)
-    {
-        Entity* tmp = *it;
-        tmp->update();
-    }
-}
-
-void EntityContener::Draw()
-{
-    for (std::list<Entity *>::iterator it=content.begin(); it != content.end(); ++it)
-    {
-        Entity* tmp = *it;
-        tmp->draw();
-    }
-}
-
-void EntityContener::Register(Entity *entity)
-{
-    content.push_back(entity);
-}

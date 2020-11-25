@@ -13,99 +13,24 @@
 #include "../AlClasses/AlDrawable.h"
 
 #include "StartUpConfig.h"
-#include "EntityContener.h"
+#include "SceneManager.h"
 
-#include "../Editables/RegisterEntities.h"
-
-#include "../Test/Test2.h"
-#include "../Enitites/Player/Player.h"
 
 class Engine
 {
 private:
     bool canBeStarted;
 
-    AlDisplay display;
-    StartUpConfig strartup;
-    EntityContener contener;
+    AlDisplay display;//Ekran programu (przyjmujemy ze jest tylko 1)
+    StartUpConfig strartup;//pliki konfiguracyjne startu programu
+    SceneManager manager;//Manager scen(poziomow), zajmuje sie ich ryowaniem, aktualizacja i zmienainiem scen
 
+    void UpdateDisplay();//aktualizacja okna ekranu
 
-    void LoadStartUp();
-    void UpdateDisplay();
-
-    void InitDisplay();
+    void InitDisplay();//inicjalizacja okna programu
 public:
-    Engine();
-    ~Engine();
+    Engine();//konstruktor silnikas
+    ~Engine();//dekonstruktor silnika
 
-    void Start();
+    void Start();//start silnika
 };
-
-//Constructors Destructors
-Engine::Engine()
-{
-     //Init allegro,keyboard,mouse,primitives itp i sprawdzenia czy nie ma bledu
-    bool test;
-    AlInitAll T= AlInitAll(test);
-    if(test==false)
-    {
-        std::cout<<T.ReturnError()<<std::endl;
-        canBeStarted = false;
-        return;
-    }
-    canBeStarted=true;
-}
-
-void Engine::InitDisplay()
-{
-    display.SetWindowMode(strartup.getDisplayMode(),strartup.getDisplayIsResizable());
-    display.CreateDisplay(strartup.getDisplayWidth(),strartup.getDisplayHeight());   
-}
-
-Engine::~Engine()
-{
-}
-
-//Private
-
-void Engine::UpdateDisplay()
-{
-    al_clear_to_color(al_map_rgb(0, 0, 0));
-    contener.Draw();
-    al_flip_display();
-}
-//Public
-
-void Engine::Start()
-{
-    if(!canBeStarted)
-        return;
-    bool exit = false;
-    
-    InitDisplay();
-
-    AlTimer timer_fps(1.0/60);
-    AlEventQueue main_queue;
-    main_queue.Register(timer_fps.TimerEvent());
-    main_queue.Register(display.DisplayEvent());
-
-    //
-    AlFont font;
-    //
-    RegisterEntities(contener);
-
-    timer_fps.Start();
-    while(!exit)
-    {
-        AlMouse::updateMouse();
-        AlKeyboard::UpdateKeyboard();
-        main_queue.WaitFEvt();
-
-        contener.Update();
-        if(main_queue.IsEventSource(timer_fps.TimerEvent()))
-            UpdateDisplay();
-
-        if(AlKeyboard::isKeyPressed(ALLEGRO_KEY_ESCAPE) || main_queue.IsEventType(ALLEGRO_EVENT_DISPLAY_CLOSE))
-            exit=true;
-    }
-}
