@@ -15,6 +15,13 @@
 #include "StartUpConfig.h"
 #include "SceneManager.h"
 
+/**
+ * \brief klasa Engine
+ *
+ * Klasa zajmujaca sie podstawowym dzialem programu.
+ *
+ * \version wersja alfa
+ */
 
 class Engine
 {
