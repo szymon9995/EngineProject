@@ -13,8 +13,11 @@ private:
     AlFont font;
     Player *player;
 public:
+    HpBar();
     HpBar(int x,int y,Player *player);
     ~HpBar();
+
+    void setVar(int x,int y,Player *player);
 
     void draw();
     void update();

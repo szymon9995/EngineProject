@@ -72,6 +72,26 @@ std::string AlConfig::getConfigValue(std::string section_name,std::string key)
     return s_tmp;
 }
 
+std::vector<std::string> AlConfig::getConfigValueRows(std::string section_name)
+{
+    ALLEGRO_CONFIG_ENTRY *entry;
+    std::vector<std::string> vec;
+    const char* tmp = al_get_first_config_entry(config,section_name.c_str(),&entry);
+    if(tmp==NULL)
+        {
+            vec.push_back("");
+            return vec;
+        }
+    std::string s_tmp ="";
+    while (entry)
+    {
+        s_tmp=tmp;
+        vec.push_back(s_tmp);
+        tmp = al_get_next_config_entry(&entry);
+    }
+    return vec;
+}
+
 bool AlConfig::isFirstCreation()
 {
     return creation;

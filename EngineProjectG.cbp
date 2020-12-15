@@ -68,6 +68,9 @@
 		<Unit filename="AlClasses/AlTimer.h" />
 		<Unit filename="AlClasses/Color.cpp" />
 		<Unit filename="AlClasses/Color.h" />
+		<Unit filename="Engine/Camera.cpp" />
+		<Unit filename="Engine/Camera.h" />
+		<Unit filename="Engine/Engine.cpp" />
 		<Unit filename="Engine/Engine.h" />
 		<Unit filename="Engine/EntityContener.cpp" />
 		<Unit filename="Engine/EntityContener.h" />
@@ -77,7 +80,6 @@
 		<Unit filename="Engine/StartUpConfig.h" />
 		<Unit filename="Enitites/Enemies/EnemyBat.cpp" />
 		<Unit filename="Enitites/Enemies/EnemyBat.h" />
-		<Unit filename="Enitites/Enemies/EnemyTest.h" />
 		<Unit filename="Enitites/Enemies/EnemyZombie.cpp" />
 		<Unit filename="Enitites/Enemies/EnemyZombie.h" />
 		<Unit filename="Enitites/Player/Player.cpp" />
@@ -86,6 +88,8 @@
 		<Unit filename="Enitites/Tiles/Tile.h" />
 		<Unit filename="Enitites/UI/HpBar.cpp" />
 		<Unit filename="Enitites/UI/HpBar.h" />
+		<Unit filename="Scenes/ScenesConfig.cpp" />
+		<Unit filename="Scenes/ScenesConfig.h" />
 		<Unit filename="Scenes/TestScene.cpp" />
 		<Unit filename="Scenes/TestScene.h" />
 		<Unit filename="Type/FloatRect.cpp" />

@@ -12,18 +12,21 @@ TestScene::~TestScene()
 
 void TestScene::Draw()
 {
-    //Tyczawsowo
+    camera.UpdateCameraBackround();
+    hpBar.draw();
+    camera.UpdateCameraForeground();
     player.draw();
-    //////
     contener.Draw();
 }
 
 void TestScene::Update()
 {
-     //Tyczawsowo
+
     player.update();
-    //////
+    hpBar.update();
+
     contener.Update();
+
 }
 void TestScene::OnDestroy()
 {
@@ -32,14 +35,57 @@ void TestScene::OnDestroy()
 
 void TestScene::OnCreate()
 {
-    player.LoadPlayer(150,150,50,50);
-    //contener.Register(&player);
-    for(int i=0;i<16;i++)
-            contener.Register(new Tile(50*i,550,50,50,&player)); 
-    contener.Register(new Tile(750,500,50,50,&player));
-    contener.Register(new Tile(650,450,50,50,&player));
-    contener.Register(new Tile(550,400,50,50,&player));
+    std::string scene_name = "test";
+    SetPlayer(scene_name);
+    SetUI(scene_name);
+    CreateTiles(scene_name);
+    SetEnemies(scene_name);
+
+    camera.setCameraScreenSize(800,600);
+    camera.setCameraToPlayer(&player);
+}
+
+void TestScene::CreateTiles(std::string scene_name)
+{
+    std::vector<int> tiles = sceneConfig.getTiles(scene_name);
+    int ts = sceneConfig.getTileSize();
+    int j=0;
+    int i=0;
+    size_t l=0;
+    while(tiles.size()>l)
+    {
+        int x = tiles.at(l);
+        l++;
+
+        if(x==-1)
+        {
+            j++;
+            i=0;
+            continue;
+        }
+        else if(x!=0)
+            contener.Register(new Tile(i*ts,j*ts,ts,ts,&player));
+        i++;
+    }
+}
+
+void TestScene::SetEnemies(std::string scene_name)
+{
     contener.Register(new EnemyBat(500,400,&player));
-    contener.Register(new HpBar(50,50,&player));
     contener.Register(new EnemyZombie(300,490,400,&player));
+}
+
+void TestScene::SetPlayer(std::string scene_name)
+{
+    int x=sceneConfig.getPlayerX(scene_name);
+    int y=sceneConfig.getPlayerY(scene_name);
+    player.LoadPlayer(x,y,50,50);
+}
+
+void TestScene::SetUI(std::string scene_name)
+{
+    //contener.Register(new HpBar(50,50,&player));
+    int x = sceneConfig.getHpBarX();
+    int y = sceneConfig.getHpBarY();
+    hpBar.setVar(x,y,&player);
 }

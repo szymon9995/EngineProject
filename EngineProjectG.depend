@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1605806989 source:c:\project\engineprojectg\main.cpp
+1608044462 source:c:\project\engineprojectg\main.cpp
 	"Engine/Engine.h"
 	"AlClasses/AlInitAll.h"
 
@@ -309,7 +309,7 @@
 
 1606316116 c:\project\engineprojectg\alclasses\aldisplay.h
 
-1606316179 c:\project\engineprojectg\alclasses\alimage.h
+1607534280 c:\project\engineprojectg\alclasses\alimage.h
 	<iostream>
 	<cstring>
 	<allegro5/allegro.h>
@@ -332,10 +332,11 @@
 
 1606316220 c:\project\engineprojectg\alclasses\almouse.h
 
-1606316097 c:\project\engineprojectg\alclasses\alconfig.h
+1608046315 c:\project\engineprojectg\alclasses\alconfig.h
 	<iostream>
+	<vector>
 
-1606314249 c:\project\engineprojectg\engine\engine.h
+1606323953 c:\project\engineprojectg\engine\engine.h
 	<iostream>
 	<allegro5/allegro.h>
 	"../AlClasses/AlInitAll.h"
@@ -425,7 +426,7 @@
 
 1606316251 c:\project\engineprojectg\alclasses\color.h
 
-1606316074 source:c:\project\engineprojectg\alclasses\alconfig.cpp
+1608046783 source:c:\project\engineprojectg\alclasses\alconfig.cpp
 	"AlConfig.h"
 	<allegro5/allegro.h>
 	<cstring>
@@ -514,7 +515,7 @@
 
 1606314753 c:\project\engineprojectg\alabstract\scene.h
 
-1606315023 c:\project\engineprojectg\scenes\testscene.h
+1608045883 c:\project\engineprojectg\scenes\testscene.h
 	"../AlAbstract/Scene.h"
 	"../Enitites/Player/Player.h"
 	"../Engine/EntityContener.h"
@@ -522,6 +523,8 @@
 	"../Enitites/Enemies/EnemyBat.h"
 	"../Enitites/Enemies/EnemyZombie.h"
 	"../Enitites/UI/HpBar.h"
+	"../Engine/Camera.h"
+	"ScenesConfig.h"
 
 1606315886 c:\project\engineprojectg\type\floatrect.h
 
@@ -537,7 +540,7 @@
 1606267932 source:c:\project\engineprojectg\enitites\tiles\tile.cpp
 	"Tile.h"
 
-1606315047 source:c:\project\engineprojectg\scenes\testscene.cpp
+1608045918 source:c:\project\engineprojectg\scenes\testscene.cpp
 	"TestScene.h"
 
 1606317766 source:c:\project\engineprojectg\engine\scenemanager.cpp
@@ -567,13 +570,13 @@
 	"EnemyBat.h"
 	<math.h>
 
-1606299883 c:\project\engineprojectg\enitites\ui\hpbar.h
+1607879892 c:\project\engineprojectg\enitites\ui\hpbar.h
 	"../../AlAbstract/Entity.h"
 	"../Player/Player.h"
 	"../../AlClasses/AlDrawable.h"
 	"../../AlClasses/AlFont.h"
 
-1606302067 source:c:\project\engineprojectg\enitites\ui\hpbar.cpp
+1608044595 source:c:\project\engineprojectg\enitites\ui\hpbar.cpp
 	"HpBar.h"
 
 1606316270 c:\project\engineprojectg\enitites\enemies\enemyzombie.h
@@ -586,6 +589,27 @@
 1606310702 source:c:\project\engineprojectg\enitites\enemies\enemyzombie.cpp
 	"EnemyZombie.h"
 
-1606314295 source:c:\project\engineprojectg\engine\engine.cpp
+1606323229 source:c:\project\engineprojectg\engine\engine.cpp
 	"Engine.h"
+
+1607879498 c:\project\engineprojectg\engine\camera.h
+	<allegro5/allegro.h>
+
+1607879722 source:c:\project\engineprojectg\engine\camera.cpp
+	"Camera.h"
+	"../Enitites/Player/Player.h"
+
+1608045402 c:\project\engineprojectg\scenes\scenesconfig.h
+	<iostream>
+	<vector>
+	"../AlClasses/AlConfig.h"
+
+1608049327 source:c:\project\engineprojectg\scenes\scenesconfig.cpp
+	"ScenesConfig.h"
+
+1608043562 source:c:\project\engineprojectg\alclasses\alanimation.cpp
+	"AlAnimation.h"
+	"AlImage.h"
+
+1608043558 c:\project\engineprojectg\alclasses\alanimation.h
 
