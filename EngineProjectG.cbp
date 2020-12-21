@@ -40,6 +40,8 @@
 		</Compiler>
 		<Unit filename="AlAbstract/Entity.h" />
 		<Unit filename="AlAbstract/Scene.h" />
+		<Unit filename="AlClasses/AlAnimation.cpp" />
+		<Unit filename="AlClasses/AlAnimation.h" />
 		<Unit filename="AlClasses/AlCond.cpp" />
 		<Unit filename="AlClasses/AlCond.h" />
 		<Unit filename="AlClasses/AlConfig.cpp" />
@@ -84,8 +86,12 @@
 		<Unit filename="Enitites/Enemies/EnemyZombie.h" />
 		<Unit filename="Enitites/Player/Player.cpp" />
 		<Unit filename="Enitites/Player/Player.h" />
+		<Unit filename="Enitites/Tiles/GrassTile.cpp" />
+		<Unit filename="Enitites/Tiles/GrassTile.h" />
 		<Unit filename="Enitites/Tiles/Tile.cpp" />
 		<Unit filename="Enitites/Tiles/Tile.h" />
+		<Unit filename="Enitites/Tiles/TilesImages.cpp" />
+		<Unit filename="Enitites/Tiles/TilesImages.h" />
 		<Unit filename="Enitites/UI/HpBar.cpp" />
 		<Unit filename="Enitites/UI/HpBar.h" />
 		<Unit filename="Scenes/ScenesConfig.cpp" />

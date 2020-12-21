@@ -4,14 +4,17 @@
 #include "../Player/Player.h"
 #include "../../Type/FloatRect.h"
 #include "../../AlClasses/AlDrawable.h"
+#include "../../AlClasses/AlImage.h"
+#include "TilesImages.h"
 
 class Tile : public Entity
 {
-private:
-    unsigned int ID;
+protected:
     int x,y;
     int w,h;
     Player *player;
+
+    static TilesImages tileImages;
 
 public:
     Tile(int x,int y,int w,int h,Player *player);
@@ -19,6 +22,7 @@ public:
 
     void draw();
     void update();
-    
-    unsigned int getID();
+
+    static Tile* getTile(int x,int y,int w,int h,Player *player,int id);
+    static void initTiles();
 };

@@ -3,3 +3,8 @@ Enemies:
     Zombie:https://fartfish.itch.io/zombie-game-asset-pack
 Player:
 
+Tiles
+    https://rottingpixels.itch.io/castle-platformer-tileset-16x16free
+    https://rottingpixels.itch.io/nature-platformer-tileset
+HPBar:
+    https://xxashuraxx.itch.io/heart

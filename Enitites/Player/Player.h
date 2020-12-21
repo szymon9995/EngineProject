@@ -17,6 +17,7 @@ class Player : public Entity //klasa gracza, glowny do sterowania
 
         const double gravity = 0.2;
         bool activate_gravity;
+        bool isAttack;
 
         void Jump();
 
@@ -24,7 +25,7 @@ class Player : public Entity //klasa gracza, glowny do sterowania
         int x,y;
         int xp,yp;
         int w,h;
-        FloatRect *pos,*prev_pos;
+        FloatRect *pos,*prev_pos,*attackBox;
 
         Player();
         ~Player();
@@ -33,5 +34,7 @@ class Player : public Entity //klasa gracza, glowny do sterowania
         void LoadPlayer(int x, int y, int w, int h);//ladowanie gracza(jego wsporzenych itp)
         void OnHit();//funckja (wywolywana przez inny Entity(przeciwnikow)) 
         void DeactiveGravity();//deaktywacja grawitacji
+        void ActiveGravity();
         int getHp();//dostanie zycia
+        bool isAttacking();
 };

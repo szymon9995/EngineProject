@@ -529,6 +529,16 @@ void AlDrawable::drawScaledImage(AlImage &image,int x,int y,double scale)
     
 }
 
+void AlDrawable::drawScaledImage(AlImage &image,int x,int y,int w,int h)
+{
+    if(image.GetBitmap()!=NULL)
+    {
+        int bitmat_width = image.getWidth();
+        int bitmat_height = image.getHeight();
+        al_draw_scaled_bitmap(image.GetBitmap(),0,0,bitmat_width,bitmat_height,x,y,w,h,0);
+    }
+}
+
 void AlDrawable::drawText(AlFont &font,Color color,int alpha,int x,int y,std::string text,...)
 {
     if(font.GetFont()==NULL)

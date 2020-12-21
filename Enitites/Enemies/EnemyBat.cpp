@@ -28,12 +28,17 @@ EnemyBat::~EnemyBat()
 
 void EnemyBat::draw()
 {
+    if(isAlive)
+    {
     images[j].drawScaledImage(x,y,2.0);
     i++;
+    }
 }
 
 void EnemyBat::update()
 {
+    if(isAlive)
+    {
     if(i==15)
     {
         i=0;
@@ -58,6 +63,9 @@ void EnemyBat::update()
         {
             player->OnHit();
         }
+        if(player->attackBox->Intersect(rect) && player->isAttacking())
+            isAlive=false;
+    }
     }
     
 }

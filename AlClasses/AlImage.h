@@ -24,4 +24,5 @@ public:
 
     void drawImage(int x, int y);//rysowanie zdjecia na podonych wpolrzednych
     void drawScaledImage(int x,int y,double scale);//rysowanie zdjecia na podanyc wpolrzednych i podanej skali
+    void drawScaledImage(int x,int y,int w,int h);
 };

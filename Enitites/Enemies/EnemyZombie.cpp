@@ -21,12 +21,15 @@ EnemyZombie::~EnemyZombie()
 
 void EnemyZombie::draw()
 {
-    images[0].drawScaledImage(x,y,2.0);
+    if(isAlive)
+        images[0].drawScaledImage(x,y,2.0);
 }
 
 void EnemyZombie::update()
 {
-    
+    if(isAlive)
+    {
+
     if(reverse==false)
         x+=speed;
     else
@@ -41,5 +44,9 @@ void EnemyZombie::update()
     {
         player->OnHit();
     }
-    
+    if(player->attackBox->Intersect(rect) && player->isAttacking())
+    {
+        isAlive=false;
+    }
+    }
 }

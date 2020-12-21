@@ -12,6 +12,7 @@ public:
 
     static void drawImage(AlImage &image,int x,int y);//rysowanie załadowanego zdjecia
     static void drawScaledImage(AlImage &image,int x,int y,double scale);//rysowanie załadowanego zdjecia w podanej skali
+    static void drawScaledImage(AlImage &image,int x,int y,int w,int h);
 
     static void drawText(AlFont &font,Color color,int alpha,int x,int y,std::string text,...);//rsowanie teksu za pomoca fonta na podanych sporzenych i kolorze
     static void drawText(AlFont &font,Color color,int x,int y,std::string text,...);//rsowanie teksu za pomoca fonta na podanych sporzenych i kolorze

@@ -12,6 +12,7 @@ HpBar::HpBar(int x,int y,Player *player)
     w=200;
     h=80;
     font.LoadFont("fonts/comic.ttf",14,0);
+    heart.loadImage("images/HpBar/heart.png");
     this->player=player;
 }
 
@@ -27,14 +28,15 @@ void HpBar::setVar(int x,int y,Player *player)
     w=200;
     h=80;
     font.LoadFont("fonts/comic.ttf",14,0);
+    heart.loadImage("images/HpBar/heart.png");
     this->player=player;
 }
 
 void HpBar::draw()
 {
-    AlDrawable::drawFilledRectangle(x,y,w,h,PINK);
-    AlDrawable::drawFilledRectangle(x,y,w -((3-player->getHp())* w/3 ),h,RED);
-    font.drawText(YELLOW,(x+w)/2,-12+(y+h)/2,"HP : %d",player->getHp());
+    int w=heart.getWidth();
+    for(int i=0;i<player->getHp();i++)
+        heart.drawImage(x+(i*w),y);
 }
 
 void HpBar::update()

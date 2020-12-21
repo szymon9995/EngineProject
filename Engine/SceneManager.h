@@ -1,3 +1,5 @@
+#pragma once
+
 #include "EntityContener.h"
 #include "../AlAbstract/Scene.h"
 #include "../Scenes/TestScene.h"
@@ -9,8 +11,6 @@ private:
     unsigned int cur_ID;//ID terazniejszej sceny
     std::map<unsigned int,Scene *> sceneList;//mapa scen i ich numeru
     Scene* cur_scene;//terazniejsza/aktywna scena
-    ///
-    TestScene testScene;//tyczasowa zienna, zmienna przetrzymujaca scene tesowa
 public:
     SceneManager();//konstruktor
     ~SceneManager();//dekstruktor

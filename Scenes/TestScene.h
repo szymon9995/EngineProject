@@ -9,17 +9,22 @@
 #include "../Enitites/UI/HpBar.h"
 #include "../Engine/Camera.h"
 #include "ScenesConfig.h"
+#include "../Enitites/Tiles/DoorTile.h"
+#include "../Engine/SceneManager.h"
 
+typedef class SceneManager SceneManager;
 class TestScene : public Scene
 {
-private:
+protected:
     EntityContener contener;//kontener dla tej sceny
     Player player;  //gracz uzywany w tej scenie
     Camera camera;
     HpBar hpBar;
     ScenesConfig sceneConfig;
+    DoorTile* exitTile;
+    SceneManager* manager;
 public:
-    TestScene();//konstruktor testowej sceny
+    TestScene(SceneManager* manager);//konstruktor testowej sceny
     ~TestScene();//dekonstruktor sceny testowej
     void Draw();//rysowanie obiektow sceny tesowej
     void Update();//uaktualnianie obiektow sceny testowej
@@ -29,4 +34,6 @@ public:
     void SetEnemies(std::string scene_name);
     void SetPlayer(std::string scene_name);
     void SetUI(std::string scene_name);
+
+    void GoNextScene();
 };

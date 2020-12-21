@@ -72,6 +72,17 @@ std::string AlConfig::getConfigValue(std::string section_name,std::string key)
     return s_tmp;
 }
 
+std::vector<std::string> AlConfig::getConfigValueRows(std::string section_name,std::string key,int n)
+{
+    std::vector<std::string> vec;
+    for(int i=1;i<=n;i++)
+    {
+        std::string tmp_key = key + std::to_string(i);
+        std::string tmp = getConfigValue(section_name,tmp_key);
+        vec.push_back(tmp);
+    }
+    return vec;
+}
 std::vector<std::string> AlConfig::getConfigValueRows(std::string section_name)
 {
     ALLEGRO_CONFIG_ENTRY *entry;

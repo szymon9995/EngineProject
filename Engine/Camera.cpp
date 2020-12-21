@@ -43,6 +43,7 @@ void Camera::UpdateCameraForeground()
 void Camera::UpdateCameraBackround()
 {
     al_identity_transform(&camera);
+    al_translate_transform(&camera,0,0);
     al_use_transform(&camera);
 }
 

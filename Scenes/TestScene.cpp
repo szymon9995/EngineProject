@@ -1,8 +1,8 @@
 #include "TestScene.h"
 
-TestScene::TestScene()
+TestScene::TestScene(SceneManager* manager)
 {
-
+    this->manager=manager;
 }
 
 TestScene::~TestScene()
@@ -12,20 +12,25 @@ TestScene::~TestScene()
 
 void TestScene::Draw()
 {
+    camera.UpdateCameraForeground();
+    contener.Draw();
+    player.draw();
+    exitTile->draw();
     camera.UpdateCameraBackround();
     hpBar.draw();
-    camera.UpdateCameraForeground();
-    player.draw();
-    contener.Draw();
 }
 
 void TestScene::Update()
 {
 
     player.update();
+    exitTile->update();
     hpBar.update();
 
     contener.Update();
+
+    if(exitTile->isNextLevel())
+        GoNextScene();
 
 }
 void TestScene::OnDestroy()
@@ -64,15 +69,35 @@ void TestScene::CreateTiles(std::string scene_name)
             continue;
         }
         else if(x!=0)
-            contener.Register(new Tile(i*ts,j*ts,ts,ts,&player));
+            contener.Register(Tile::getTile(i*ts,j*ts,ts,ts,&player,x));
         i++;
     }
+
+    int x=sceneConfig.getExitX(scene_name);
+    int y=sceneConfig.getExitY(scene_name);
+
+    exitTile = new DoorTile(x,y,ts,ts,&player);
 }
 
 void TestScene::SetEnemies(std::string scene_name)
 {
-    contener.Register(new EnemyBat(500,400,&player));
-    contener.Register(new EnemyZombie(300,490,400,&player));
+    std::vector<int> bats = sceneConfig.getBats(scene_name);
+    std::vector<int> zombies = sceneConfig.getZombies(scene_name);
+
+    size_t l=0;
+    while (bats.size()>l)
+    {
+        contener.Register(new EnemyBat(bats.at(l),bats.at(l+1),&player));
+        l+=2;
+    }
+    l=0;
+    while (zombies.size()>l)
+    {
+        contener.Register(new EnemyZombie(zombies.at(l),zombies.at(l+1),zombies.at(l+2),&player));
+        l+=3;
+    }
+    //contener.Register(new EnemyBat(500,400,&player));
+    //contener.Register(new EnemyZombie(300,490,400,&player));
 }
 
 void TestScene::SetPlayer(std::string scene_name)
@@ -88,4 +113,9 @@ void TestScene::SetUI(std::string scene_name)
     int x = sceneConfig.getHpBarX();
     int y = sceneConfig.getHpBarY();
     hpBar.setVar(x,y,&player);
+}
+
+void TestScene::GoNextScene()
+{
+    manager->LoadScene(1);
 }

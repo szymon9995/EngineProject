@@ -1,5 +1,9 @@
 #include "SceneManager.h"
 
+#include "../Enitites/Tiles/Tile.h"
+#include "../Scenes/SecondScene.h"
+#include "../Scenes/BossScene.h"
+
 SceneManager::SceneManager()
 {
     cur_scene = NULL;
@@ -11,7 +15,7 @@ SceneManager::~SceneManager()
     {
         delete sceneList[i];
     }
-    
+
 }
 
 void SceneManager::Update()
@@ -39,12 +43,15 @@ void SceneManager::LoadScene(unsigned int sceneNum)
 
 void SceneManager::AddScene(Scene *scene,unsigned int num)
 {
-    //sceneList.insert(num,scene);
+    scene->OnCreate();
+    sceneList[num] = scene;
 }
 
 void SceneManager::CreateFirst()
 {
-    testScene.OnCreate();
-    cur_scene = &testScene;
-    //cur_scene = sceneList[0];
+    AddScene(new TestScene(this),0);
+    AddScene(new SecondScene(this),1);
+    AddScene(new BossScene(this),2);
+    cur_scene = sceneList[0];
+    Tile::initTiles();
 }

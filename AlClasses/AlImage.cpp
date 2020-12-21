@@ -37,6 +37,8 @@ void AlImage::unLoadImage()
 AlImage AlImage::cropOut(int x,int y,int w,int h)
 {
     AlImage tmp;
+    if(bitmap==NULL)
+        return tmp;
     ALLEGRO_BITMAP *tmp2 = al_create_sub_bitmap(bitmap,x,y,w,h);
     tmp.loadImage(tmp2);
     al_destroy_bitmap(tmp2);
@@ -46,6 +48,8 @@ AlImage AlImage::cropOut(int x,int y,int w,int h)
 AlImage AlImage::cropOut(AlImage image,int x,int y,int w,int h)
 {
     AlImage tmp;
+    if(image.GetBitmap()==NULL)
+        return tmp;
     ALLEGRO_BITMAP *tmp2 = al_create_sub_bitmap(image.GetBitmap(),x,y,w,h);
     tmp.loadImage(al_clone_bitmap(tmp2));
     al_destroy_bitmap(tmp2);
@@ -78,6 +82,16 @@ void AlImage::drawScaledImage(int x,int y,double scale)
         al_draw_scaled_bitmap(bitmap,0,0,bitmat_width,bitmat_height,x,y,bitmat_width*scale,bitmat_height*scale,0);
     }
 
+}
+
+void AlImage::drawScaledImage(int x,int y,int w,int h)
+{
+    if(bitmap!=NULL)
+    {
+        int bitmat_width = getWidth();
+        int bitmat_height = getHeight();
+        al_draw_scaled_bitmap(bitmap,0,0,bitmat_width,bitmat_height,x,y,w,h,0);
+    }
 }
 
 //private

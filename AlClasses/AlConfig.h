@@ -25,6 +25,7 @@ public:
 
     std::string getConfigValue(std::string section_name,std::string key);//dostanie wartosci, w formie stringa, znadjujaca sie w podanej sekcji pod podanym kluczem
     std::vector<std::string> getConfigValueRows(std::string section_name);
+    std::vector<std::string> getConfigValueRows(std::string section_name,std::string key,int n);
 
     bool isFirstCreation(); //zwraca prawde jezeli poraz pierwszy tworzymy plik
 };

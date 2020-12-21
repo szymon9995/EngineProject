@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1608044462 source:c:\project\engineprojectg\main.cpp
+1608487696 source:c:\project\engineprojectg\main.cpp
 	"Engine/Engine.h"
 	"AlClasses/AlInitAll.h"
 
@@ -309,7 +309,7 @@
 
 1606316116 c:\project\engineprojectg\alclasses\aldisplay.h
 
-1607534280 c:\project\engineprojectg\alclasses\alimage.h
+1608237790 c:\project\engineprojectg\alclasses\alimage.h
 	<iostream>
 	<cstring>
 	<allegro5/allegro.h>
@@ -332,7 +332,7 @@
 
 1606316220 c:\project\engineprojectg\alclasses\almouse.h
 
-1608046315 c:\project\engineprojectg\alclasses\alconfig.h
+1608243017 c:\project\engineprojectg\alclasses\alconfig.h
 	<iostream>
 	<vector>
 
@@ -386,18 +386,18 @@
 
 1603976746 c:\project\engineprojectg\alabstract\drawableobject.h
 
-1606172609 c:\project\engineprojectg\alabstract\entity.h
+1608559565 c:\project\engineprojectg\alabstract\entity.h
 
 1606314639 c:\project\engineprojectg\engine\entitycontener.h
 	"../AlAbstract/Entity.h"
 	<list>
 
-1606316134 c:\project\engineprojectg\alclasses\aldrawable.h
+1608476754 c:\project\engineprojectg\alclasses\aldrawable.h
 	<stdarg.h>
 	"Color.h"
 	<iostream>
 
-1606318488 c:\project\engineprojectg\enitites\player\player.h
+1608559895 c:\project\engineprojectg\enitites\player\player.h
 	"../../AlAbstract/Entity.h"
 	"../../AlClasses/AlKeyboard.h"
 	"../../AlClasses/AlDrawable.h"
@@ -416,17 +416,15 @@
 	"../../AlClasses/AlKeyboard.h"
 	"../../AlClasses/AlDrawable.h"
 
-1606223112 c:\project\engineprojectg\enitites\tiles\grasstile.h
+1608250288 c:\project\engineprojectg\enitites\tiles\grasstile.h
 	"Tile.h"
-	"../../AlClasses/AlDrawable.h"
-	"../Player/Player.h"
 
 1605201064 c:\project\engineprojectg\alabstract\tile.h
 	"Entity.h"
 
 1606316251 c:\project\engineprojectg\alclasses\color.h
 
-1608046783 source:c:\project\engineprojectg\alclasses\alconfig.cpp
+1608477041 source:c:\project\engineprojectg\alclasses\alconfig.cpp
 	"AlConfig.h"
 	<allegro5/allegro.h>
 	<cstring>
@@ -444,7 +442,7 @@
 	"AlDisplay.h"
 	<allegro5/allegro.h>
 
-1606156159 source:c:\project\engineprojectg\alclasses\aldrawable.cpp
+1608476821 source:c:\project\engineprojectg\alclasses\aldrawable.cpp
 	"AlDrawable.h"
 	"Color.cpp"
 	<allegro5/allegro.h>
@@ -489,7 +487,7 @@
 	"AlKeyboard.h"
 	<allegro5/allegro.h>
 
-1606085235 source:c:\project\engineprojectg\alclasses\alinitall.cpp
+1608153038 source:c:\project\engineprojectg\alclasses\alinitall.cpp
 	"AlInitAll.h"
 	<allegro5/allegro.h>
 	<allegro5/allegro_primitives.h>
@@ -498,7 +496,7 @@
 	<allegro5/allegro_audio.h>
 	<allegro5/allegro_acodec.h>
 
-1606153464 source:c:\project\engineprojectg\alclasses\alimage.cpp
+1608237838 source:c:\project\engineprojectg\alclasses\alimage.cpp
 	"AlImage.h"
 
 1606314701 source:c:\project\engineprojectg\engine\entitycontener.cpp
@@ -507,7 +505,7 @@
 1606170526 source:c:\project\engineprojectg\engine\startupconfig.cpp
 	"StartUpConfig.h"
 
-1606317482 c:\project\engineprojectg\engine\scenemanager.h
+1608504689 c:\project\engineprojectg\engine\scenemanager.h
 	"EntityContener.h"
 	"../AlAbstract/Scene.h"
 	"../Scenes/TestScene.h"
@@ -515,7 +513,7 @@
 
 1606314753 c:\project\engineprojectg\alabstract\scene.h
 
-1608045883 c:\project\engineprojectg\scenes\testscene.h
+1608505589 c:\project\engineprojectg\scenes\testscene.h
 	"../AlAbstract/Scene.h"
 	"../Enitites/Player/Player.h"
 	"../Engine/EntityContener.h"
@@ -525,28 +523,52 @@
 	"../Enitites/UI/HpBar.h"
 	"../Engine/Camera.h"
 	"ScenesConfig.h"
+	"../Enitites/Tiles/DoorTile.h"
+	"../Engine/SceneManager.h"
 
 1606315886 c:\project\engineprojectg\type\floatrect.h
 
-1606251107 c:\project\engineprojectg\enitites\tiles\tile.h
+1608154201 c:\project\engineprojectg\enitites\tiles\tile.h
 	"../../AlAbstract/Entity.h"
 	"../Player/Player.h"
 	"../../Type/FloatRect.h"
 	"../../AlClasses/AlDrawable.h"
+	"../../AlClasses/AlImage.h"
+	"TilesImages.h"
 
 1606179860 source:c:\project\engineprojectg\type\floatrect.cpp
 	"FloatRect.h"
 
-1606267932 source:c:\project\engineprojectg\enitites\tiles\tile.cpp
+1608555952 source:c:\project\engineprojectg\enitites\tiles\tile.cpp
 	"Tile.h"
+	"GrassTile.h"
+	"RDSkyTile.h"
+	"RUSkyTile.h"
+	"LDSkyTile.h"
+	"LUSkyTile.h"
+	"MiddleSkyTile.h"
+	"SkyTile.h"
+	"GrassRTile.h"
+	"GrassLTile.h"
+	"DirtLTile.h"
+	"DirtRTile.h"
+	"DirtTile.h"
+	"CastleBrickTile.h"
+	"CastleDirtTile.h"
+	"BackBrickLTile.h"
+	"BackBrickRTile.h"
+	"BackBrickTile.h"
 
-1608045918 source:c:\project\engineprojectg\scenes\testscene.cpp
+1608558283 source:c:\project\engineprojectg\scenes\testscene.cpp
 	"TestScene.h"
 
-1606317766 source:c:\project\engineprojectg\engine\scenemanager.cpp
+1608557602 source:c:\project\engineprojectg\engine\scenemanager.cpp
 	"SceneManager.h"
+	"../Enitites/Tiles/Tile.h"
+	"../Scenes/SecondScene.h"
+	"../Scenes/BossScene.h"
 
-1606301026 source:c:\project\engineprojectg\enitites\player\player.cpp
+1608559946 source:c:\project\engineprojectg\enitites\player\player.cpp
 	"Player.h"
 
 1606256637 c:\project\engineprojectg\enitites\enemies\enemycharger.h
@@ -566,17 +588,18 @@
 	"../../AlClasses/AlDrawable.h"
 	"../../AlClasses/AlImage.h"
 
-1606269300 source:c:\project\engineprojectg\enitites\enemies\enemybat.cpp
+1608560053 source:c:\project\engineprojectg\enitites\enemies\enemybat.cpp
 	"EnemyBat.h"
 	<math.h>
 
-1607879892 c:\project\engineprojectg\enitites\ui\hpbar.h
+1608558782 c:\project\engineprojectg\enitites\ui\hpbar.h
 	"../../AlAbstract/Entity.h"
 	"../Player/Player.h"
 	"../../AlClasses/AlDrawable.h"
 	"../../AlClasses/AlFont.h"
+	"../../AlClasses/AlImage.h"
 
-1608044595 source:c:\project\engineprojectg\enitites\ui\hpbar.cpp
+1608559191 source:c:\project\engineprojectg\enitites\ui\hpbar.cpp
 	"HpBar.h"
 
 1606316270 c:\project\engineprojectg\enitites\enemies\enemyzombie.h
@@ -589,22 +612,22 @@
 1606310702 source:c:\project\engineprojectg\enitites\enemies\enemyzombie.cpp
 	"EnemyZombie.h"
 
-1606323229 source:c:\project\engineprojectg\engine\engine.cpp
+1608154267 source:c:\project\engineprojectg\engine\engine.cpp
 	"Engine.h"
 
 1607879498 c:\project\engineprojectg\engine\camera.h
 	<allegro5/allegro.h>
 
-1607879722 source:c:\project\engineprojectg\engine\camera.cpp
+1608486882 source:c:\project\engineprojectg\engine\camera.cpp
 	"Camera.h"
 	"../Enitites/Player/Player.h"
 
-1608045402 c:\project\engineprojectg\scenes\scenesconfig.h
+1608499993 c:\project\engineprojectg\scenes\scenesconfig.h
 	<iostream>
 	<vector>
 	"../AlClasses/AlConfig.h"
 
-1608049327 source:c:\project\engineprojectg\scenes\scenesconfig.cpp
+1608500355 source:c:\project\engineprojectg\scenes\scenesconfig.cpp
 	"ScenesConfig.h"
 
 1608043562 source:c:\project\engineprojectg\alclasses\alanimation.cpp
@@ -612,4 +635,89 @@
 	"AlImage.h"
 
 1608043558 c:\project\engineprojectg\alclasses\alanimation.h
+
+1608555818 c:\project\engineprojectg\enitites\tiles\tilesimages.h
+	"../../AlClasses/AlImage.h"
+
+1608556080 source:c:\project\engineprojectg\enitites\tiles\tilesimages.cpp
+	"TilesImages.h"
+
+1608240487 source:c:\project\engineprojectg\enitites\tiles\grasstile.cpp
+	"GrassTile.h"
+
+1608251335 c:\project\engineprojectg\enitites\tiles\rdskytile.h
+	"Tile.h"
+
+1608251338 c:\project\engineprojectg\enitites\tiles\ruskytile.h
+	"Tile.h"
+
+1608251326 c:\project\engineprojectg\enitites\tiles\ldskytile.h
+	"Tile.h"
+
+1608251328 c:\project\engineprojectg\enitites\tiles\luskytile.h
+	"Tile.h"
+
+1608251332 c:\project\engineprojectg\enitites\tiles\middleskytile.h
+	"Tile.h"
+
+1608251342 c:\project\engineprojectg\enitites\tiles\skytile.h
+	"Tile.h"
+
+1608481341 c:\project\engineprojectg\enitites\tiles\grassrtile.h
+	"Tile.h"
+
+1608481334 c:\project\engineprojectg\enitites\tiles\grassltile.h
+	"Tile.h"
+
+1608478013 c:\project\engineprojectg\enitites\tiles\dirtltile.h
+	"Tile.h"
+
+1608478032 c:\project\engineprojectg\enitites\tiles\dirtrtile.h
+	"Tile.h"
+
+1608478043 c:\project\engineprojectg\enitites\tiles\dirttile.h
+	"Tile.h"
+
+1608499821 c:\project\engineprojectg\enitites\tiles\doortile.h
+	"Tile.h"
+
+1608053780 source:c:\project\engineprojectg\scenes\menuscene.cpp
+	"MenuScene.h"
+
+1608052777 c:\project\engineprojectg\scenes\menuscene.h
+	"../AlAbstract/Scene.h"
+
+1608501206 c:\project\engineprojectg\engine\scenemanager.cpp
+	"SceneManager.h"
+	"../Enitites/Tiles/Tile.h"
+
+1608558120 c:\project\engineprojectg\scenes\secondscene.h
+	"TestScene.h"
+
+1608558365 source:c:\project\engineprojectg\scenes\secondscene.cpp
+	"SecondScene.h"
+
+1608551327 c:\project\engineprojectg\enitites\tiles\castlebricktile.h
+	"Tile.h"
+
+1608551336 c:\project\engineprojectg\enitites\tiles\castledirttile.h
+	"Tile.h"
+
+1608552866 c:\project\engineprojectg\enitites\tiles\backbrickltile.h
+	"Tile.h"
+
+1608552870 c:\project\engineprojectg\enitites\tiles\backbrickmtile.h
+	"Tile.h"
+
+1608552873 c:\project\engineprojectg\enitites\tiles\backbrickrtile.h
+	"Tile.h"
+
+1608552878 c:\project\engineprojectg\enitites\tiles\backbricktile.h
+	"Tile.h"
+
+1608557341 c:\project\engineprojectg\scenes\bossscene.h
+	"TestScene.h"
+
+1608558266 source:c:\project\engineprojectg\scenes\bossscene.cpp
+	"BossScene.h"
 
