@@ -41,3 +41,12 @@ void EntityContener::Unload()
     }
         
 }
+
+void EntityContener::ResurectAllEntities()
+{
+    for (std::list<Entity *>::iterator it=content.begin(); it != content.end(); ++it)
+    {
+        Entity* tmp = *it;
+        tmp->resurect();
+    }
+}

@@ -74,8 +74,8 @@ void Engine::Start()
 
             manager.Update();
             UpdateDisplay();
-
-            if(AlKeyboard::isKeyPressed(ALLEGRO_KEY_ESCAPE) || main_queue.IsEventType(ALLEGRO_EVENT_DISPLAY_CLOSE))
+            
+            if(main_queue.IsEventType(ALLEGRO_EVENT_DISPLAY_CLOSE) || manager.canEnd())
             exit=true;
         } 
             

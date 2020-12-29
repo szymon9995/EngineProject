@@ -15,5 +15,6 @@ public:
     void Draw();//rysowanie wszystkich Enitity
     void Register(Entity* entity);//Rejestracja Entity (przez wskaznik)
     void Unload();//odładowywanie obiektow Entity
+    void ResurectAllEntities();
     
 };

@@ -2,7 +2,7 @@
 
 SecondScene::~SecondScene()
 {
-    
+    OnDestroy();
 }
 
 void SecondScene::OnCreate()
@@ -20,5 +20,13 @@ void SecondScene::OnCreate()
 
 void SecondScene::GoNextScene()
 {
-    manager->LoadScene(2);
+    manager->LoadScene(3);
+}
+
+void SecondScene::SaveProgress()
+{
+    AlConfig tmp = AlConfig("savedata");
+    tmp.setConfigValue("save","scene",2);
+    tmp.setConfigValue("save","playerX",sceneConfig.getPlayerX("second"));
+    tmp.setConfigValue("save","playerY",sceneConfig.getPlayerY("second"));
 }

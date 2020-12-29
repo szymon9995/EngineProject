@@ -15,5 +15,13 @@ void BossScene::OnCreate()
 
 void BossScene::GoNextScene()
 {
-    //manager->LoadScene(1);
+    manager->LoadScene(0);
+}
+
+void BossScene::SaveProgress()
+{
+    AlConfig tmp = AlConfig("savedata");
+    tmp.setConfigValue("save","scene",2);
+    tmp.setConfigValue("save","playerX",sceneConfig.getPlayerX("boss"));
+    tmp.setConfigValue("save","playerY",sceneConfig.getPlayerY("boss"));
 }

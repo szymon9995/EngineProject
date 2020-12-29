@@ -9,5 +9,6 @@ public:
     virtual void OnDestroy() {};//wirtualna metoda niszczenia sceny
     virtual void Draw() {};//wirtualna metoda rysowania sceny
     virtual void Update() {};//wirtualny funckja aktualizacji sceny
+    virtual void OnLoad() {};
     virtual ~Scene() {};//wirtualny dekonstruktor sceny
 };

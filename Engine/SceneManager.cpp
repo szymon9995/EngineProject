@@ -3,10 +3,13 @@
 #include "../Enitites/Tiles/Tile.h"
 #include "../Scenes/SecondScene.h"
 #include "../Scenes/BossScene.h"
+#include "../Scenes/FirstScene.h"
+#include "../Scenes/MenuScene.h"
 
 SceneManager::SceneManager()
 {
     cur_scene = NULL;
+    isEnd=false;
 }
 
 SceneManager::~SceneManager()
@@ -39,6 +42,7 @@ void SceneManager::LoadScene(unsigned int sceneNum)
 {
     UnloadScene();
     cur_scene = sceneList[sceneNum];
+    cur_scene->OnLoad();
 }
 
 void SceneManager::AddScene(Scene *scene,unsigned int num)
@@ -49,9 +53,20 @@ void SceneManager::AddScene(Scene *scene,unsigned int num)
 
 void SceneManager::CreateFirst()
 {
-    AddScene(new TestScene(this),0);
-    AddScene(new SecondScene(this),1);
-    AddScene(new BossScene(this),2);
-    cur_scene = sceneList[0];
+    AddScene(new MenuScene(this),0);
+    AddScene(new FirstScene(this),1);
+    AddScene(new SecondScene(this),2);
+    AddScene(new BossScene(this),3);
+    LoadScene(0);
     Tile::initTiles();
+}
+
+void SceneManager::stopApp()
+{
+    isEnd=true;
+}
+
+bool SceneManager::canEnd()
+{
+    return isEnd;
 }

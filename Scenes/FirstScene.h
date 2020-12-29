@@ -2,13 +2,13 @@
 
 #include "LevelSceneBase.h"
 
-class BossScene : public LevelSceneBase
+class FirstScene : public LevelSceneBase
 {
 private:
     
 public:
-    BossScene(SceneManager* manager) : LevelSceneBase(manager){};
-    ~BossScene(){};
+    FirstScene(SceneManager* manager) : LevelSceneBase(manager){};
+    ~FirstScene();
     void OnCreate();
     void GoNextScene();
     void SaveProgress();

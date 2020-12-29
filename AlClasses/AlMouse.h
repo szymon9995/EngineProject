@@ -9,12 +9,12 @@ private:
 public:
     enum Button
     {
-        RClick=1,
-        LClick=2,
+        LClick=1,
+        RClick=2,
         R_LClick=3,
         MClick=4,
-        R_MClick=5,
-        L_MClick=6,
+        L_MClick=5,
+        R_MClick=6,
         R_L_MClick=7
         ////////////////
     };
@@ -22,4 +22,5 @@ public:
     static int getMouseX();//dostanie wpolrzednych x myszki
     static int getMouseY();//dostanie wsporzednych y myszki
     static int getButton();//dostanie numer zacisietego guzika
+    static bool isContained(int x,int y,int w,int h);
 };

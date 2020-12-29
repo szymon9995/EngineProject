@@ -1,3 +1,5 @@
+#pragma once
+
 #include "../../AlAbstract/Entity.h"
 #include "../../Type/FloatRect.h"
 #include "../../AlClasses/AlDrawable.h"

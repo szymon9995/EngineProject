@@ -6,5 +6,5 @@ enum Color //enum mające wybrane 'kolory'
         ORANGE,VIOLET,PURPLE,PINK,
         BLACK,WHITE,
         DARK_GREEN,LIME,
-        LIGHT_BLUE,DARK_BLUE
+        LIGHT_BLUE,DARK_BLUE,GREY
 };

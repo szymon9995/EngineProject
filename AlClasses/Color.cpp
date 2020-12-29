@@ -19,6 +19,7 @@ static ALLEGRO_COLOR getColor(Color color)
     case LIME: return al_map_rgb(0,255,0); break;
     case LIGHT_BLUE: return al_map_rgb(0,255,255); break;
     case DARK_BLUE: return al_map_rgb(0,0,127); break;
+    case GREY: return al_map_rgb(128,128,128); break;
     default: return al_map_rgb(0,0,0); break;
     }
 }
@@ -40,6 +41,7 @@ static ALLEGRO_COLOR getTransparentColor(Color color, int alpha)
     case LIME: return al_map_rgba(0,255,0,alpha); break;
     case LIGHT_BLUE: return al_map_rgba(0,255,255,alpha); break;
     case DARK_BLUE: return al_map_rgba(0,0,127,alpha); break;
+    case GREY: return al_map_rgba(128,128,128,alpha); break;
     default: return al_map_rgba(0,0,0,alpha); break;
     }
 }
