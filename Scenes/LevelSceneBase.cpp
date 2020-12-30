@@ -43,7 +43,7 @@ void LevelSceneBase::OnDestroy()
 
 void LevelSceneBase::OnCreate()
 {
-    std::string scene_name = "test";
+    scene_name = "test";
     SetPlayer(scene_name);
     SetUI(scene_name);
     CreateTiles(scene_name);
@@ -138,6 +138,10 @@ void LevelSceneBase::OnLoad()
     {
         SaveProgress();
         std::cout<<"AA";
+
     }
-        
+    ///////////pozniej na gore
+    SetPlayer(scene_name);
+    //////////
+    exitTile->reloadDoor();
 }

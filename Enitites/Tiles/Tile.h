@@ -13,11 +13,12 @@ protected:
     int x,y;
     int w,h;
     Player *player;
+    int tileID;
 
-    static TilesImages tileImages;
+    static TilesImages* tileImages;
 
 public:
-    Tile(int x,int y,int w,int h,Player *player);
+    Tile(int x,int y,int w,int h,int tileID,Player *player);
     ~Tile();
 
     void draw();
@@ -25,4 +26,5 @@ public:
 
     static Tile* getTile(int x,int y,int w,int h,Player *player,int id);
     static void initTiles();
+    static void destroyTiles();
 };

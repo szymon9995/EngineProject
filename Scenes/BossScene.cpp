@@ -2,7 +2,7 @@
 
 void BossScene::OnCreate()
 {
-    std::string scene_name = "boss";
+    scene_name = "boss";
     SetPlayer(scene_name);
     SetUI(scene_name);
     CreateTiles(scene_name);

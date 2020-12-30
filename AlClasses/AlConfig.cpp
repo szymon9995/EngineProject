@@ -107,3 +107,8 @@ bool AlConfig::isFirstCreation()
 {
     return creation;
 }
+
+void AlConfig::manualSave()
+{
+    al_save_config_file(name.c_str(),config);
+}

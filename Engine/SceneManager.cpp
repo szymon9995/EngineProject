@@ -18,6 +18,7 @@ SceneManager::~SceneManager()
     {
         delete sceneList[i];
     }
+    Tile::destroyTiles();
 
 }
 

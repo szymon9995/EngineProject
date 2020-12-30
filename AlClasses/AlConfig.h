@@ -28,4 +28,5 @@ public:
     std::vector<std::string> getConfigValueRows(std::string section_name,std::string key,int n);
 
     bool isFirstCreation(); //zwraca prawde jezeli poraz pierwszy tworzymy plik
+    void manualSave();
 };

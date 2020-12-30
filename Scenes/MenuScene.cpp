@@ -63,6 +63,7 @@ void MenuScene::LoadSave()
 {
     if(saveExits)
     {
+        AlConfig saveFile = AlConfig("savedata");
         std::cout<<"Load Save"<<std::endl;
         std::string tmp = saveFile.getConfigValue("save","scene");
         int scene = std::stoi(tmp);
@@ -79,6 +80,7 @@ void MenuScene::OnExit()
 
 void MenuScene::OnLoad()
 {
+    AlConfig saveFile = AlConfig("savedata");
     if(saveFile.getConfigValue("save","scene")=="-1")
         saveExits=false;
     else
@@ -88,4 +90,8 @@ void MenuScene::OnLoad()
         loadButton.setTextColor(GREY);
     else
         loadButton.setTextColor(YELLOW);
+
+    std::cout<<saveFile.getConfigValue("save","scene")<<std::endl;
+    std::cout<<saveFile.getConfigValue("save","playerX")<<std::endl;
+    std::cout<<saveFile.getConfigValue("save","playerY")<<std::endl;
 }

@@ -23,6 +23,7 @@ protected:
     ScenesConfig sceneConfig;
     DoorTile* exitTile;
     SceneManager* manager;
+    std::string scene_name;
 public:
     LevelSceneBase(SceneManager* manager);
     ~LevelSceneBase();

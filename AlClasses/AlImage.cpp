@@ -8,11 +8,13 @@ ALLEGRO_BITMAP* AlImage::GetBitmap()
 
 AlImage::AlImage()
 {
+    imgname="";
     bitmap = NULL;
 }
 
 AlImage::~AlImage()
 {
+    std::cout<<" Deleting:"<<imgname<<std::endl;
     unLoadImage();
 }
 
@@ -25,35 +27,42 @@ bool AlImage::loadImage(std::string path)
     {
         return false;
     }
+    imgname=path;
     return true;
 }
 
 void AlImage::unLoadImage()
 {
-    if(bitmap==NULL)
+    std::cout<<"Unloading:"<<imgname;
+    //imgname="";
+    if(bitmap!=NULL)
         al_destroy_bitmap(bitmap);
+    std::cout<<"Succes"<<std::endl;
+    bitmap=NULL;
 }
 
-AlImage AlImage::cropOut(int x,int y,int w,int h)
+AlImage& AlImage::cropOut(int x,int y,int w,int h)
 {
-    AlImage tmp;
+    AlImage* tmp = new AlImage();
     if(bitmap==NULL)
-        return tmp;
+        return *tmp;
     ALLEGRO_BITMAP *tmp2 = al_create_sub_bitmap(bitmap,x,y,w,h);
-    tmp.loadImage(tmp2);
+    tmp->loadImage(tmp2);
     al_destroy_bitmap(tmp2);
-    return tmp;
+    tmp->imgname="Copy:"+imgname+std::to_string(x)+" "+std::to_string(y);
+    return *tmp;
 }
 
-AlImage AlImage::cropOut(AlImage image,int x,int y,int w,int h)
+AlImage& AlImage::cropOut(AlImage& image,int x,int y,int w,int h)
 {
-    AlImage tmp;
+    AlImage *tmp = new AlImage();
     if(image.GetBitmap()==NULL)
-        return tmp;
+        return *tmp;
     ALLEGRO_BITMAP *tmp2 = al_create_sub_bitmap(image.GetBitmap(),x,y,w,h);
-    tmp.loadImage(al_clone_bitmap(tmp2));
+    tmp->loadImage(tmp2);
     al_destroy_bitmap(tmp2);
-    return tmp;
+    tmp->imgname="Copy:"+image.imgname+std::to_string(x)+" "+std::to_string(y);
+    return *tmp;
 
 }
 

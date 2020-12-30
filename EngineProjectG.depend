@@ -307,9 +307,9 @@
 	"allegro5/allegro.h"
 	"allegro5/allegro_audio.h"
 
-1606316116 c:\project\engineprojectg\alclasses\aldisplay.h
+1609334726 c:\project\engineprojectg\alclasses\aldisplay.h
 
-1608237790 c:\project\engineprojectg\alclasses\alimage.h
+1609338318 c:\project\engineprojectg\alclasses\alimage.h
 	<iostream>
 	<cstring>
 	<allegro5/allegro.h>
@@ -332,7 +332,7 @@
 
 1609251725 c:\project\engineprojectg\alclasses\almouse.h
 
-1608243017 c:\project\engineprojectg\alclasses\alconfig.h
+1609284370 c:\project\engineprojectg\alclasses\alconfig.h
 	<iostream>
 	<vector>
 
@@ -416,7 +416,7 @@
 	"../../AlClasses/AlKeyboard.h"
 	"../../AlClasses/AlDrawable.h"
 
-1608250288 c:\project\engineprojectg\enitites\tiles\grasstile.h
+1609347539 c:\project\engineprojectg\enitites\tiles\grasstile.h
 	"Tile.h"
 
 1605201064 c:\project\engineprojectg\alabstract\tile.h
@@ -424,7 +424,7 @@
 
 1609261558 c:\project\engineprojectg\alclasses\color.h
 
-1608477041 source:c:\project\engineprojectg\alclasses\alconfig.cpp
+1609285420 source:c:\project\engineprojectg\alclasses\alconfig.cpp
 	"AlConfig.h"
 	<allegro5/allegro.h>
 	<cstring>
@@ -438,7 +438,7 @@
 
 1606084892 c:\project\engineprojectg\alclasses\almutex.h
 
-1606079803 source:c:\project\engineprojectg\alclasses\aldisplay.cpp
+1609334723 source:c:\project\engineprojectg\alclasses\aldisplay.cpp
 	"AlDisplay.h"
 	<allegro5/allegro.h>
 
@@ -497,7 +497,7 @@
 	<allegro5/allegro_audio.h>
 	<allegro5/allegro_acodec.h>
 
-1608237838 source:c:\project\engineprojectg\alclasses\alimage.cpp
+1609341904 source:c:\project\engineprojectg\alclasses\alimage.cpp
 	"AlImage.h"
 
 1609280958 source:c:\project\engineprojectg\engine\entitycontener.cpp
@@ -529,7 +529,7 @@
 
 1606315886 c:\project\engineprojectg\type\floatrect.h
 
-1608154201 c:\project\engineprojectg\enitites\tiles\tile.h
+1609347096 c:\project\engineprojectg\enitites\tiles\tile.h
 	"../../AlAbstract/Entity.h"
 	"../Player/Player.h"
 	"../../Type/FloatRect.h"
@@ -540,30 +540,14 @@
 1606179860 source:c:\project\engineprojectg\type\floatrect.cpp
 	"FloatRect.h"
 
-1608555952 source:c:\project\engineprojectg\enitites\tiles\tile.cpp
+1609347506 source:c:\project\engineprojectg\enitites\tiles\tile.cpp
 	"Tile.h"
-	"GrassTile.h"
-	"RDSkyTile.h"
-	"RUSkyTile.h"
-	"LDSkyTile.h"
-	"LUSkyTile.h"
-	"MiddleSkyTile.h"
-	"SkyTile.h"
-	"GrassRTile.h"
-	"GrassLTile.h"
-	"DirtLTile.h"
-	"DirtRTile.h"
-	"DirtTile.h"
-	"CastleBrickTile.h"
-	"CastleDirtTile.h"
-	"BackBrickLTile.h"
-	"BackBrickRTile.h"
-	"BackBrickTile.h"
+	"BackRoundTile.h"
 
 1608558283 source:c:\project\engineprojectg\scenes\testscene.cpp
 	"TestScene.h"
 
-1609281969 source:c:\project\engineprojectg\engine\scenemanager.cpp
+1609341961 source:c:\project\engineprojectg\engine\scenemanager.cpp
 	"SceneManager.h"
 	"../Enitites/Tiles/Tile.h"
 	"../Scenes/SecondScene.h"
@@ -639,13 +623,13 @@
 
 1608043558 c:\project\engineprojectg\alclasses\alanimation.h
 
-1608555818 c:\project\engineprojectg\enitites\tiles\tilesimages.h
+1609346642 c:\project\engineprojectg\enitites\tiles\tilesimages.h
 	"../../AlClasses/AlImage.h"
 
-1608556080 source:c:\project\engineprojectg\enitites\tiles\tilesimages.cpp
+1609347889 source:c:\project\engineprojectg\enitites\tiles\tilesimages.cpp
 	"TilesImages.h"
 
-1608240487 source:c:\project\engineprojectg\enitites\tiles\grasstile.cpp
+1609342040 source:c:\project\engineprojectg\enitites\tiles\grasstile.cpp
 	"GrassTile.h"
 
 1608251335 c:\project\engineprojectg\enitites\tiles\rdskytile.h
@@ -681,14 +665,14 @@
 1608478043 c:\project\engineprojectg\enitites\tiles\dirttile.h
 	"Tile.h"
 
-1608499821 c:\project\engineprojectg\enitites\tiles\doortile.h
+1609348035 c:\project\engineprojectg\enitites\tiles\doortile.h
 	"Tile.h"
 
-1609282750 source:c:\project\engineprojectg\scenes\menuscene.cpp
+1609284662 source:c:\project\engineprojectg\scenes\menuscene.cpp
 	"MenuScene.h"
 	"../AlClasses/AlKeyboard.h"
 
-1609282752 c:\project\engineprojectg\scenes\menuscene.h
+1609284654 c:\project\engineprojectg\scenes\menuscene.h
 	"../AlAbstract/Scene.h"
 	"../Engine/SceneManager.h"
 	"../Enitites/UI/Button.h"
@@ -728,7 +712,7 @@
 1609281659 source:c:\project\engineprojectg\scenes\bossscene.cpp
 	"BossScene.h"
 
-1609282245 c:\project\engineprojectg\scenes\levelscenebase.h
+1609348544 c:\project\engineprojectg\scenes\levelscenebase.h
 	"../AlAbstract/Scene.h"
 	"../Enitites/Player/Player.h"
 	"../Engine/EntityContener.h"
@@ -741,13 +725,13 @@
 	"../Enitites/Tiles/DoorTile.h"
 	"../Engine/SceneManager.h"
 
-1609282471 source:c:\project\engineprojectg\scenes\levelscenebase.cpp
+1609348273 source:c:\project\engineprojectg\scenes\levelscenebase.cpp
 	"LevelSceneBase.h"
 
 1609281490 c:\project\engineprojectg\scenes\firstscene.h
 	"LevelSceneBase.h"
 
-1609282588 source:c:\project\engineprojectg\scenes\firstscene.cpp
+1609284431 source:c:\project\engineprojectg\scenes\firstscene.cpp
 	"FirstScene.h"
 
 1609260940 c:\project\engineprojectg\enitites\ui\button.h
@@ -757,4 +741,7 @@
 1609260979 source:c:\project\engineprojectg\enitites\ui\button.cpp
 	"Button.h"
 	"../../AlClasses/AlMouse.h"
+
+1609347074 c:\project\engineprojectg\enitites\tiles\backroundtile.h
+	"Tile.h"
 

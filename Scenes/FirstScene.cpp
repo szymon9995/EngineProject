@@ -7,7 +7,7 @@ FirstScene::~FirstScene()
 
 void FirstScene::OnCreate()
 {
-    std::string scene_name = "test";
+    scene_name = "test";
     SetPlayer(scene_name);
     SetUI(scene_name);
     CreateTiles(scene_name);
@@ -30,6 +30,7 @@ void FirstScene::SaveProgress()
     tmp.setConfigValue("save","scene",1);
     tmp.setConfigValue("save","playerX",sceneConfig.getPlayerX("test"));
     tmp.setConfigValue("save","playerY",sceneConfig.getPlayerY("test"));
+    tmp.manualSave();
     std::cout<<tmp.getConfigValue("save","scene");
     std::cout<<tmp.getConfigValue("save","playerX");
     std::cout<<tmp.getConfigValue("save","playerY");

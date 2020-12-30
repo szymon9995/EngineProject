@@ -7,7 +7,7 @@ SecondScene::~SecondScene()
 
 void SecondScene::OnCreate()
 {
-    std::string scene_name = "second";
+    scene_name = "second";
     SetPlayer(scene_name);
     SetUI(scene_name);
     CreateTiles(scene_name);

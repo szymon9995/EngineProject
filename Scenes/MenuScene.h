@@ -10,7 +10,6 @@ class MenuScene : public Scene
 {
 private:
     SceneManager *manager;
-    AlConfig saveFile = AlConfig("savedata");
     Button startButton;
     Button loadButton;
     Button exitButton;
