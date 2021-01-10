@@ -539,6 +539,32 @@ void AlDrawable::drawScaledImage(AlImage &image,int x,int y,int w,int h)
     }
 }
 
+void AlDrawable::drawReversedImage(AlImage &image,int x,int y)
+{
+    if(image.GetBitmap()!=NULL)
+        al_draw_bitmap(image.GetBitmap(),x,y,ALLEGRO_FLIP_HORIZONTAL);
+}
+
+void AlDrawable::drawReversedScaledImage(AlImage &image,int x,int y,double scale)
+{
+    if(image.GetBitmap()!=NULL)
+    {
+        int bitmat_width = image.getWidth();
+        int bitmat_height = image.getHeight();
+        al_draw_scaled_bitmap(image.GetBitmap(),0,0,bitmat_width,bitmat_height,x,y,bitmat_width*scale,bitmat_height*scale,ALLEGRO_FLIP_HORIZONTAL);
+    }
+}
+
+void AlDrawable::drawReversedScaledImage(AlImage &image,int x,int y,int w,int h)
+{
+    if(image.GetBitmap()!=NULL)
+    {
+        int bitmat_width = image.getWidth();
+        int bitmat_height = image.getHeight();
+        al_draw_scaled_bitmap(image.GetBitmap(),0,0,bitmat_width,bitmat_height,x,y,w,h,ALLEGRO_FLIP_HORIZONTAL);
+    }
+}
+
 void AlDrawable::drawText(AlFont &font,Color color,int alpha,int x,int y,std::string text,...)
 {
     if(font.GetFont()==NULL)

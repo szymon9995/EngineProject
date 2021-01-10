@@ -1,5 +1,6 @@
 #pragma once
 #include <allegro5/allegro.h>
+#include <allegro5/events.h>
 //typedef struct ALLEGRO_EVENT_QUEUE ALLEGRO_EVENT_QUEUE;
 //typedef struct ALLEGRO_EVENT_SOURCE ALLEGRO_EVENT_SOURCE;
 //typedef struct ALLEGRO_EVENT ALLEGRO_EVENT;

@@ -71,3 +71,10 @@ int Camera::getPosY()
 {
     return position[1];
 }
+
+bool Camera::canDraw(int x,int y,int w,int h)
+{
+    if(x>position[0]-(2*w) && x<position[0]+screenWidth+(2*w) && y>position[1]-(2*h) && y<position[1]+screenHeight+(2*h))
+        return true;
+    return false;
+}

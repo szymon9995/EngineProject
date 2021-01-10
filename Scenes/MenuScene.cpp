@@ -1,6 +1,7 @@
 #include "MenuScene.h"
 
 #include "../AlClasses/AlKeyboard.h"
+#include "SaveConfig.h"
 
 MenuScene::MenuScene(SceneManager *manager)
 {
@@ -46,12 +47,14 @@ void MenuScene::OnCreate()
     exitButton.setText("Exit");
     exitButton.setSize(200,440,400,100);
     exitButton.setColor(BLUE);
+
+    SaveConfig::initSave();
     
 }
 
 void MenuScene::OnDestroy()
-{
-
+{   
+    SaveConfig::endSave();
 }
 
 void MenuScene::StartGame()
@@ -63,11 +66,9 @@ void MenuScene::LoadSave()
 {
     if(saveExits)
     {
-        AlConfig saveFile = AlConfig("savedata");
         std::cout<<"Load Save"<<std::endl;
-        std::string tmp = saveFile.getConfigValue("save","scene");
-        int scene = std::stoi(tmp);
-        saveFile.setConfigValue("save","load_save","true");
+        int scene = SaveConfig::getScene();
+        SaveConfig::loadProgress();
         manager->LoadScene(scene);
     }
     
@@ -80,8 +81,8 @@ void MenuScene::OnExit()
 
 void MenuScene::OnLoad()
 {
-    AlConfig saveFile = AlConfig("savedata");
-    if(saveFile.getConfigValue("save","scene")=="-1")
+   
+    if(SaveConfig::getScene()==-1)
         saveExits=false;
     else
         saveExits=true;
@@ -90,8 +91,4 @@ void MenuScene::OnLoad()
         loadButton.setTextColor(GREY);
     else
         loadButton.setTextColor(YELLOW);
-
-    std::cout<<saveFile.getConfigValue("save","scene")<<std::endl;
-    std::cout<<saveFile.getConfigValue("save","playerX")<<std::endl;
-    std::cout<<saveFile.getConfigValue("save","playerY")<<std::endl;
 }

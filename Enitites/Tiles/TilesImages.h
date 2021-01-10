@@ -27,6 +27,7 @@ private:
     AlImage backBrickRTile;
     AlImage backBrickLTile;
     AlImage backBrickTile;
+    AlImage waterTile;
 
     AlImage invalidTile;
 public:
@@ -54,6 +55,8 @@ public:
     AlImage& getBackBrickTile();
 
     AlImage& getTileImage(int id);
+
+    AlImage& getWaterTile();
 
     void LoadData();
 };

@@ -4,8 +4,9 @@
 int main()
 {
 
-    Engine engine;
-    engine.Start();
+    Engine* engine = Engine::getEngine();
+    engine->Start();
+    engine->destroyEngine();
 
     return 0;
 }

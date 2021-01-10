@@ -16,8 +16,9 @@ private:
     int radius;//promien kola w ktorym gracz ma sie znalesc by zaczal za nim isc
     int speed;//szyvkosc
     AlImage images[15];//zdjecia do tego przeciwnika
+    bool dirLeft;
 public:
-    EnemyBat(int x,int y,Player *player);//konsturktor nietoperza, dajemy jego wspolrzedne pojawienia i wkaznik na gracza
+    EnemyBat(int x,int y,int w,int h,Player *player);//konsturktor nietoperza, dajemy jego wspolrzedne pojawienia i wkaznik na gracza
     ~EnemyBat();//dekonstruktor nietoperza
 
     void draw();//rysowane nietoperza

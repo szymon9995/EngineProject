@@ -12,10 +12,7 @@ void SecondScene::OnCreate()
     SetUI(scene_name);
     CreateTiles(scene_name);
     SetEnemies(scene_name);
-
-    camera.setCameraScreenSize(800,600);
-    camera.setCameraToPlayer(&player);
-    
+    SetCamera();
 }
 
 void SecondScene::GoNextScene()
@@ -25,8 +22,11 @@ void SecondScene::GoNextScene()
 
 void SecondScene::SaveProgress()
 {
-    AlConfig tmp = AlConfig("savedata");
-    tmp.setConfigValue("save","scene",2);
-    tmp.setConfigValue("save","playerX",sceneConfig.getPlayerX("second"));
-    tmp.setConfigValue("save","playerY",sceneConfig.getPlayerY("second"));
+
+    SaveConfig::saveProgress(2,sceneConfig.getPlayerX("second"),sceneConfig.getPlayerY("second"));
+
+    std::cout<<"Saving"<<std::endl;
+    std::cout<<"Scene:"<<SaveConfig::getScene()<<std::endl;
+    std::cout<<"PlayerX:"<<SaveConfig::getPlayerX()<<std::endl;
+    std::cout<<"PlayerY:"<<SaveConfig::getPlayerY()<<std::endl;
 }

@@ -7,8 +7,8 @@ private:
     AlConfig startup = AlConfig("startup");
 
     //Display
-    int display_w;
-    int display_h;
+    static int display_w;
+    static int display_h;
     bool display_isFull;
     bool display_isResizable;
 
@@ -36,8 +36,8 @@ public:
     void setDefaultDiplayIsResizable();
     void setDiplayIsResizable(bool isResizable);
 
-    int getDisplayWidth();
-    int getDisplayHeight();
+    static int getDisplayWidth();
+    static int getDisplayHeight();
     bool getDisplayMode();
     bool getDisplayIsResizable();
 

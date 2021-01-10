@@ -1,10 +1,12 @@
 #include "Tile.h"
 
 #include "BackRoundTile.h"
+#include "WaterTile.h"
+#include "../../Engine/StartUpConfig.h"
 
 TilesImages *Tile::tileImages = new TilesImages();
 
-Tile::Tile(int x,int y,int w,int h,int tileID,Player *player)
+Tile::Tile(int x,int y,int w,int h,int tileID,Player *player,Camera *camera)
 {
     this->x=x;
     this->y=y;
@@ -12,6 +14,7 @@ Tile::Tile(int x,int y,int w,int h,int tileID,Player *player)
     this->h=h;
     this->player=player;
     this->tileID=tileID;
+    this->camera=camera;
 }
 
 Tile::~Tile()
@@ -42,17 +45,22 @@ void Tile::update()
             player->x=tileRec.Right;
         }
     }
-
+    if(camera->canDraw(x,y,w,h))
+        canDraw=true;
+    else
+        canDraw=false;
 }
 
 void Tile::draw()
 {
+    
+    if(canDraw)
     tileImages->getTileImage(tileID).drawScaledImage(x,y,w,h);
     //AlDrawable::drawFilledRectangle(x,y,x+w,y+h,LIME);
 }
 
 
-Tile* Tile::getTile(int x,int y,int w,int h,Player *player,int id)
+Tile* Tile::getTile(int x,int y,int w,int h,Player *player,Camera *camera,int id)
 {
     switch (id)
     {
@@ -66,7 +74,7 @@ Tile* Tile::getTile(int x,int y,int w,int h,Player *player,int id)
     case 15:
     case 16:
     case 17:
-        return new BackRoundTile(x,y,w,h,id,player);
+        return new BackRoundTile(x,y,w,h,id,player,camera);
         break;
 
     case 1:
@@ -78,7 +86,10 @@ Tile* Tile::getTile(int x,int y,int w,int h,Player *player,int id)
     case 13:
     case 14:
     default:
-        return new Tile(x,y,w,h,id,player);
+        return new Tile(x,y,w,h,id,player,camera);
+        break;
+    case 18:
+        return new WaterTile(x,y,w,h,id,player,camera);
         break;
     }
 }

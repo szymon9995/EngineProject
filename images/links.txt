@@ -2,9 +2,11 @@ Enemies:
     Bat:https://elthen.itch.io/bat-sprite-pack
     Zombie:https://fartfish.itch.io/zombie-game-asset-pack
 Player:
-
+    https://szadiart.itch.io/rpg-main-character
 Tiles
     https://rottingpixels.itch.io/castle-platformer-tileset-16x16free
     https://rottingpixels.itch.io/nature-platformer-tileset
 HPBar:
     https://xxashuraxx.itch.io/heart
+Boss:
+    https://darkpixel-kronovi.itch.io/undead-executioner

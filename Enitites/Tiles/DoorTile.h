@@ -6,7 +6,7 @@ class DoorTile : public Tile
 private:
     bool nextLevel;
 public:
-    DoorTile(int x,int y,int w,int h,Player *player) : Tile(x,y,w,h,0,player) {nextLevel=false;};
+    DoorTile(int x,int y,int w,int h,Player *player,Camera *camera) : Tile(x,y,w,h,0,player,camera) {nextLevel=false;};
     ~DoorTile(){};
 
     void update()
@@ -16,11 +16,16 @@ public:
         {
             nextLevel=true;
         }
+        if(camera->canDraw(x,y,w,h))
+            canDraw=true;
+        else
+            canDraw=false;
     }
 
     void draw()
     {
-       tileImages->getDoorTile().drawScaledImage(x,y,w,h);
+        if(canDraw)
+        tileImages->getDoorTile().drawScaledImage(x,y,w,h);
     }
 
     bool isNextLevel()

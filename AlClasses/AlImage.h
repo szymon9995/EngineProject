@@ -10,7 +10,6 @@ private:
     void loadImage(ALLEGRO_BITMAP* image);//konstrukor bitmapy przez podanie innej juz zaladowanej/dostepnej bitmapy
     
 public:
-    std::string imgname;
     ALLEGRO_BITMAP* GetBitmap();
 
     AlImage();//kostruktor
@@ -27,4 +26,7 @@ public:
     void drawImage(int x, int y);//rysowanie zdjecia na podonych wpolrzednych
     void drawScaledImage(int x,int y,double scale);//rysowanie zdjecia na podanyc wpolrzednych i podanej skali
     void drawScaledImage(int x,int y,int w,int h);
+    void drawReversedImage(int x,int y);
+    void drawReversedScaledImage(int x,int y,double scale);
+    void drawReversedScaledImage(int x,int y,int w,int h);
 };

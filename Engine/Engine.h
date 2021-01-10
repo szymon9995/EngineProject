@@ -28,6 +28,8 @@ class Engine
 private:
     bool canBeStarted;
 
+    static Engine* engine;
+
     AlDisplay display;//Ekran programu (przyjmujemy ze jest tylko 1)
     StartUpConfig strartup;//pliki konfiguracyjne startu programu
     SceneManager manager;//Manager scen(poziomow), zajmuje sie ich ryowaniem, aktualizacja i zmienainiem scen
@@ -35,9 +37,13 @@ private:
     void UpdateDisplay();//aktualizacja okna ekranu
 
     void InitDisplay();//inicjalizacja okna programu
-public:
     Engine();//konstruktor silnikas
+public:
+    
     ~Engine();//dekonstruktor silnika
 
     void Start();//start silnika
+
+    static Engine* getEngine();
+    static void destroyEngine();
 };

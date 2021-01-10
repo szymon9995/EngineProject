@@ -28,4 +28,6 @@ public:
     void UpdateCameraBackround();
     int getPosX();
     int getPosY();
+
+    bool canDraw(int x,int y,int w,int h);
 };

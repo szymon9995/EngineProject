@@ -1,4 +1,5 @@
 #include "LevelSceneBase.h"
+#include"../Engine/StartUpConfig.h"
 
 LevelSceneBase::LevelSceneBase(SceneManager* manager)
 {
@@ -18,6 +19,9 @@ void LevelSceneBase::Draw()
     exitTile->draw();
     camera.UpdateCameraBackround();
     hpBar.draw();
+
+    if(player.getHp()==0)
+        AlDrawable::drawText(font,RED,StartUpConfig::getDisplayWidth()/2,StartUpConfig::getDisplayHeight()/2,"You Died! To Continue Press Y");
 }
 
 void LevelSceneBase::Update()
@@ -35,6 +39,12 @@ void LevelSceneBase::Update()
     if(exitTile->isNextLevel())
         GoNextScene();
 
+    if(player.getHp()==0)
+    {
+        if(AlKeyboard::isKeyPressed(ALLEGRO_KEY_Y))
+            this->OnLoad();
+    }
+
 }
 void LevelSceneBase::OnDestroy()
 {
@@ -48,9 +58,7 @@ void LevelSceneBase::OnCreate()
     SetUI(scene_name);
     CreateTiles(scene_name);
     SetEnemies(scene_name);
-
-    camera.setCameraScreenSize(800,600);
-    camera.setCameraToPlayer(&player);
+    SetCamera();
 }
 
 void LevelSceneBase::CreateTiles(std::string scene_name)
@@ -72,31 +80,31 @@ void LevelSceneBase::CreateTiles(std::string scene_name)
             continue;
         }
         else if(x!=0)
-            contener.Register(Tile::getTile(i*ts,j*ts,ts,ts,&player,x));
+            contener.Register(Tile::getTile(i*ts,j*ts,ts,ts,&player,&camera,x));
         i++;
     }
 
     int x=sceneConfig.getExitX(scene_name);
     int y=sceneConfig.getExitY(scene_name);
 
-    exitTile = new DoorTile(x,y,ts,ts,&player);
+    exitTile = new DoorTile(x,y,ts,ts,&player,&camera);
 }
 
 void LevelSceneBase::SetEnemies(std::string scene_name)
 {
     std::vector<int> bats = sceneConfig.getBats(scene_name);
     std::vector<int> zombies = sceneConfig.getZombies(scene_name);
-
+    int ts = sceneConfig.getTileSize();
     size_t l=0;
     while (bats.size()>l)
     {
-        contener.Register(new EnemyBat(bats.at(l),bats.at(l+1),&player));
+        contener.Register(new EnemyBat(bats.at(l),bats.at(l+1),ts/2,ts/2,&player));
         l+=2;
     }
     l=0;
     while (zombies.size()>l)
     {
-        contener.Register(new EnemyZombie(zombies.at(l),zombies.at(l+1),zombies.at(l+2),&player));
+        contener.Register(new EnemyZombie(zombies.at(l),zombies.at(l+1),zombies.at(l+2),ts,ts,&player));
         l+=3;
     }
     //contener.Register(new EnemyBat(500,400,&player));
@@ -117,19 +125,18 @@ void LevelSceneBase::SetUI(std::string scene_name)
     int x = sceneConfig.getHpBarX();
     int y = sceneConfig.getHpBarY();
     hpBar.setVar(x,y,&player);
+
+    font.LoadFont("fonts/comic.ttf",40,0);
 }
 
 void LevelSceneBase::OnLoad()
 {
     std::cout<<"Loaded";
-    AlConfig tmp = AlConfig("savedata");
-    std::string isTmp = tmp.getConfigValue("save","load_save");
-    if(isTmp=="true")
+    if(SaveConfig::shouldLoad())
     {
         std::cout<<"SaveLoad";
-        tmp.setConfigValue("save","load_save","false");
-        int x = std::stoi(tmp.getConfigValue("save","playerX"));
-        int y = std::stoi(tmp.getConfigValue("save","playerY"));
+        int x = SaveConfig::getPlayerX();
+        int y = SaveConfig::getPlayerY();
         int s = sceneConfig.getTileSize();
         player.LoadPlayer(x,y,s,s);
         contener.ResurectAllEntities();
@@ -137,11 +144,17 @@ void LevelSceneBase::OnLoad()
     else
     {
         SaveProgress();
-        std::cout<<"AA";
+        std::cout<<"ProgressSaved"<<std::endl;
 
     }
     ///////////pozniej na gore
     SetPlayer(scene_name);
     //////////
     exitTile->reloadDoor();
+}
+
+void LevelSceneBase::SetCamera()
+{
+    camera.setCameraScreenSize(StartUpConfig::getDisplayWidth(),StartUpConfig::getDisplayHeight());
+    camera.setCameraToPlayer(&player);
 }

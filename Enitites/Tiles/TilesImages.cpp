@@ -99,6 +99,11 @@ AlImage& TilesImages::getBackBrickTile()
     return backBrickTile;
 }
 
+AlImage& TilesImages::getWaterTile()
+{
+    return waterTile;
+}
+
 void TilesImages::LoadData()
 {
     forestSprite.loadImage("images/Tiles/nature-tileset.png");
@@ -122,6 +127,8 @@ void TilesImages::LoadTiles()
     dirtRTile = forestSprite.cropOut(32,16,16,16);
     dirtLTile = forestSprite.cropOut(0,16,16,16);
     doorTile = forestSprite.cropOut(64,16,16,16);
+
+    waterTile = forestSprite.cropOut(80,80,16,16);
 
     castleBrickTile = castleSprite.cropOut(16,16,16,16);
     castleDirtTile = castleSprite.cropOut(64,16,16,16);
@@ -202,7 +209,10 @@ AlImage& TilesImages::getTileImage(int id)
         return backBrickTile;
         break;
 
-
+    case 18:
+        return waterTile;
+        break;
+        
     default:
         return invalidTile;
         break;

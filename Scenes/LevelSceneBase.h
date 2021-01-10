@@ -11,6 +11,7 @@
 #include "ScenesConfig.h"
 #include "../Enitites/Tiles/DoorTile.h"
 #include "../Engine/SceneManager.h"
+#include "SaveConfig.h"
 
 typedef class SceneManager SceneManager;
 class LevelSceneBase : public Scene
@@ -24,6 +25,7 @@ protected:
     DoorTile* exitTile;
     SceneManager* manager;
     std::string scene_name;
+    AlFont font;
 public:
     LevelSceneBase(SceneManager* manager);
     ~LevelSceneBase();
@@ -37,6 +39,7 @@ public:
     void SetEnemies(std::string scene_name);
     void SetPlayer(std::string scene_name);
     void SetUI(std::string scene_name);
+    void SetCamera();
 
     virtual void GoNextScene() = 0;
     virtual void SaveProgress(){};

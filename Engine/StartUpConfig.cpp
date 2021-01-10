@@ -1,5 +1,8 @@
 #include "StartUpConfig.h"
 
+
+int StartUpConfig::display_w=0;
+int StartUpConfig::display_h=0;
 //Counstructocs/Deconstrucors
 StartUpConfig::StartUpConfig()
 {

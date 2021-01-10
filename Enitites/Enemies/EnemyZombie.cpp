@@ -1,6 +1,6 @@
 #include "EnemyZombie.h"
 
-EnemyZombie::EnemyZombie(int x,int y,int x2,Player *player)
+EnemyZombie::EnemyZombie(int x,int y,int x2,int w,int h,Player *player)
 {
     AlImage zombie;
     zombie.loadImage("images/Enemies/Zombie/zombie_run.png");
@@ -12,6 +12,8 @@ EnemyZombie::EnemyZombie(int x,int y,int x2,Player *player)
     this->x1=x;
     this->x2=x2;
     this->speed=2;
+    this->w=w;
+    this->h=h;
     this->player=player;
 }
 
@@ -22,7 +24,13 @@ EnemyZombie::~EnemyZombie()
 void EnemyZombie::draw()
 {
     if(isAlive)
-        images[0].drawScaledImage(x,y,2.0);
+    {
+        if(!reverse)
+            images[0].drawScaledImage(x,y,w+(w/3),h+(h/3));
+        else
+            images[0].drawReversedScaledImage(x,y,w+(w/3),h+(h/3));
+    }
+        
 }
 
 void EnemyZombie::update()
@@ -39,10 +47,10 @@ void EnemyZombie::update()
         reverse=true;
     else if(x<x1)
         reverse=false;
-    FloatRect rect(x,y,32,32);
+    FloatRect rect(x,y,w,h);
     if(player->pos->Intersect(rect))
     {
-        player->OnHit();
+        player->OnHit(1);
     }
     if(player->attackBox->Intersect(rect) && player->isAttacking())
     {
