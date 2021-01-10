@@ -82,6 +82,8 @@
 		<Unit filename="Engine/SceneManager.h" />
 		<Unit filename="Engine/StartUpConfig.cpp" />
 		<Unit filename="Engine/StartUpConfig.h" />
+		<Unit filename="Enitites/Enemies/BossParticle.cpp" />
+		<Unit filename="Enitites/Enemies/BossParticle.h" />
 		<Unit filename="Enitites/Enemies/EnemyBat.cpp" />
 		<Unit filename="Enitites/Enemies/EnemyBat.h" />
 		<Unit filename="Enitites/Enemies/EnemyBoss.cpp" />
@@ -96,6 +98,7 @@
 		<Unit filename="Enitites/Tiles/Tile.h" />
 		<Unit filename="Enitites/Tiles/TilesImages.cpp" />
 		<Unit filename="Enitites/Tiles/TilesImages.h" />
+		<Unit filename="Enitites/Tiles/WaterTile.h" />
 		<Unit filename="Enitites/UI/Button.cpp" />
 		<Unit filename="Enitites/UI/Button.h" />
 		<Unit filename="Enitites/UI/HpBar.cpp" />
