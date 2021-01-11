@@ -30,7 +30,7 @@ void Player::LoadPlayer(int x, int y, int w, int h)
     attackBox = new FloatRect(x+w,y,w,h);
     isAttack=false;
     isCoolDown = false;
-    dir=LEFT;
+    dir=lastdir=LEFT;
 
     isAlive=true;
 
@@ -103,8 +103,8 @@ void Player::update()
         attackBox = new FloatRect(x,y+h,w,h);
     ActiveGravity();
 
-    Attack();
     AttackCoolDown();
+    Attack();
     Invincibility();
 }
 
@@ -164,6 +164,8 @@ void Player::Jump()
 void Player::Attack()
 {
     if(isAttack)
+    {
+        dir=lastdir;
         if(MainQueu::getQuee()->IsEventSource(attackTimer.TimerEvent()))
         {
             isAttack=false;
@@ -171,6 +173,8 @@ void Player::Attack()
             attackCoolDown.Start();
             isCoolDown=true;
         }
+    }
+    lastdir=dir;
 }
 
 void Player::Invincibility()

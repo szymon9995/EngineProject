@@ -42,7 +42,8 @@ class Player : public Entity //klasa gracza, glowny do sterowania
         int xp,yp;
         int w,h;
         FloatRect *pos,*prev_pos,*attackBox;
-        DIRECTION dir;
+        DIRECTION dir,lastdir;
+        
         
         Player();
         ~Player();

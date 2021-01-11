@@ -139,7 +139,6 @@ void LevelSceneBase::OnLoad()
         int y = SaveConfig::getPlayerY();
         int s = sceneConfig.getTileSize();
         player.LoadPlayer(x,y,s,s);
-        contener.ResurectAllEntities();
     }
     else
     {
@@ -151,6 +150,7 @@ void LevelSceneBase::OnLoad()
     SetPlayer(scene_name);
     //////////
     exitTile->reloadDoor();
+    contener.ResurectAllEntities();
 }
 
 void LevelSceneBase::SetCamera()
