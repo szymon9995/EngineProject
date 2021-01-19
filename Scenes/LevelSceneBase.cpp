@@ -131,10 +131,8 @@ void LevelSceneBase::SetUI(std::string scene_name)
 
 void LevelSceneBase::OnLoad()
 {
-    std::cout<<"Loaded";
     if(SaveConfig::shouldLoad())
     {
-        std::cout<<"SaveLoad";
         int x = SaveConfig::getPlayerX();
         int y = SaveConfig::getPlayerY();
         int s = sceneConfig.getTileSize();
@@ -143,7 +141,6 @@ void LevelSceneBase::OnLoad()
     else
     {
         SaveProgress();
-        std::cout<<"ProgressSaved"<<std::endl;
 
     }
     ///////////pozniej na gore

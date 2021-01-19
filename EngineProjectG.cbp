@@ -82,6 +82,8 @@
 		<Unit filename="Engine/SceneManager.h" />
 		<Unit filename="Engine/StartUpConfig.cpp" />
 		<Unit filename="Engine/StartUpConfig.h" />
+		<Unit filename="Enitites/AnimationState.cpp" />
+		<Unit filename="Enitites/AnimationState.h" />
 		<Unit filename="Enitites/Enemies/BossParticle.cpp" />
 		<Unit filename="Enitites/Enemies/BossParticle.h" />
 		<Unit filename="Enitites/Enemies/EnemyBat.cpp" />
@@ -92,6 +94,8 @@
 		<Unit filename="Enitites/Enemies/EnemyZombie.h" />
 		<Unit filename="Enitites/Player/Player.cpp" />
 		<Unit filename="Enitites/Player/Player.h" />
+		<Unit filename="Enitites/State.cpp" />
+		<Unit filename="Enitites/State.h" />
 		<Unit filename="Enitites/Tiles/BackRoundTile.h" />
 		<Unit filename="Enitites/Tiles/DoorTile.h" />
 		<Unit filename="Enitites/Tiles/Tile.cpp" />

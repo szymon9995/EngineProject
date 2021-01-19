@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1610246644 source:c:\project\engineprojectg\main.cpp
+1611091527 source:c:\project\engineprojectg\main.cpp
 	"Engine/Engine.h"
 	"AlClasses/AlInitAll.h"
 
@@ -574,14 +574,15 @@
 	"EnemyCharger.h"
 	<math.h>
 
-1610230572 c:\project\engineprojectg\enitites\enemies\enemybat.h
+1611100647 c:\project\engineprojectg\enitites\enemies\enemybat.h
 	"../../AlAbstract/Entity.h"
 	"../Player/Player.h"
 	"../../Type/FloatRect.h"
 	"../../AlClasses/AlDrawable.h"
 	"../../AlClasses/AlImage.h"
+	"../AnimationState.h"
 
-1610384686 source:c:\project\engineprojectg\enitites\enemies\enemybat.cpp
+1611100179 source:c:\project\engineprojectg\enitites\enemies\enemybat.cpp
 	"EnemyBat.h"
 	<math.h>
 
@@ -605,7 +606,7 @@
 1610231831 source:c:\project\engineprojectg\enitites\enemies\enemyzombie.cpp
 	"EnemyZombie.h"
 
-1610156210 source:c:\project\engineprojectg\engine\engine.cpp
+1611099093 source:c:\project\engineprojectg\engine\engine.cpp
 	"Engine.h"
 	"MainQueu.h"
 
@@ -693,7 +694,7 @@
 1609281186 c:\project\engineprojectg\scenes\secondscene.h
 	"LevelSceneBase.h"
 
-1610056572 source:c:\project\engineprojectg\scenes\secondscene.cpp
+1611100574 source:c:\project\engineprojectg\scenes\secondscene.cpp
 	"SecondScene.h"
 
 1608551327 c:\project\engineprojectg\enitites\tiles\castlebricktile.h
@@ -718,7 +719,7 @@
 	"LevelSceneBase.h"
 	"../Enitites/Enemies/EnemyBoss.h"
 
-1610385025 source:c:\project\engineprojectg\scenes\bossscene.cpp
+1611100560 source:c:\project\engineprojectg\scenes\bossscene.cpp
 	"BossScene.h"
 
 1610234506 c:\project\engineprojectg\scenes\levelscenebase.h
@@ -735,14 +736,14 @@
 	"../Engine/SceneManager.h"
 	"SaveConfig.h"
 
-1610383524 source:c:\project\engineprojectg\scenes\levelscenebase.cpp
+1611100535 source:c:\project\engineprojectg\scenes\levelscenebase.cpp
 	"LevelSceneBase.h"
 	"../Engine/StartUpConfig.h"
 
 1609281490 c:\project\engineprojectg\scenes\firstscene.h
 	"LevelSceneBase.h"
 
-1610056640 source:c:\project\engineprojectg\scenes\firstscene.cpp
+1611100566 source:c:\project\engineprojectg\scenes\firstscene.cpp
 	"FirstScene.h"
 
 1609260940 c:\project\engineprojectg\enitites\ui\button.h
@@ -774,11 +775,11 @@
 	"../../AlClasses/AlImage.h"
 	"BossParticle.h"
 
-1610155254 c:\project\engineprojectg\engine\mainqueu.h
+1611099109 c:\project\engineprojectg\engine\mainqueu.h
 	"../AlClasses/AlEventQueue.h"
 	"../AlClasses/AlTimer.h"
 
-1610156246 source:c:\project\engineprojectg\engine\mainqueu.cpp
+1611099096 source:c:\project\engineprojectg\engine\mainqueu.cpp
 	"MainQueu.h"
 	<iostream>
 
@@ -792,6 +793,22 @@
 	"../../AlClasses/AlImage.h"
 	"../Player/Player.h"
 
-1610248140 source:c:\project\engineprojectg\enitites\enemies\bossparticle.cpp
+1610385482 source:c:\project\engineprojectg\enitites\enemies\bossparticle.cpp
 	"BossParticle.h"
+
+1611099490 c:\project\engineprojectg\enitites\animationstate.h
+	<vector>
+	"State.h"
+	"../AlClasses/AlTimer.h"
+	"../Engine/MainQueu.h"
+
+1611099266 c:\project\engineprojectg\enitites\state.h
+	"../AlClasses/AlImage.h"
+	<vector>
+
+1611100460 source:c:\project\engineprojectg\enitites\animationstate.cpp
+	"AnimationState.h"
+
+1611100447 source:c:\project\engineprojectg\enitites\state.cpp
+	"State.h"
 

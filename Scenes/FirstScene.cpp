@@ -23,9 +23,4 @@ void FirstScene::GoNextScene()
 void FirstScene::SaveProgress()
 {
     SaveConfig::saveProgress(1,sceneConfig.getPlayerX("test"),sceneConfig.getPlayerY("test"));
-
-    std::cout<<"Saving"<<std::endl;
-    std::cout<<"Scene:"<<SaveConfig::getScene()<<std::endl;
-    std::cout<<"PlayerX:"<<SaveConfig::getPlayerX()<<std::endl;
-    std::cout<<"PlayerY:"<<SaveConfig::getPlayerY()<<std::endl;
 }

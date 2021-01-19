@@ -6,6 +6,8 @@
 #include "../../AlClasses/AlDrawable.h"
 #include "../../AlClasses/AlImage.h"
 
+#include "../AnimationState.h"
+
 class EnemyBat : public Entity//kalsa wroga niepoterz
 {
 private:
@@ -17,6 +19,7 @@ private:
     int speed;//szyvkosc
     AlImage images[15];//zdjecia do tego przeciwnika
     bool dirLeft;
+    //AnimationState states;
 public:
     EnemyBat(int x,int y,int w,int h,Player *player);//konsturktor nietoperza, dajemy jego wspolrzedne pojawienia i wkaznik na gracza
     ~EnemyBat();//dekonstruktor nietoperza

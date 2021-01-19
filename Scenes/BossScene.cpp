@@ -52,11 +52,6 @@ void BossScene::GoNextScene()
 void BossScene::SaveProgress()
 {
     SaveConfig::saveProgress(3,sceneConfig.getPlayerX("boss"),sceneConfig.getPlayerY("boss"));
-
-    std::cout<<"Saving"<<std::endl;
-    std::cout<<"Scene:"<<SaveConfig::getScene()<<std::endl;
-    std::cout<<"PlayerX:"<<SaveConfig::getPlayerX()<<std::endl;
-    std::cout<<"PlayerY:"<<SaveConfig::getPlayerY()<<std::endl;
 }
 
 void BossScene::OnLoad()

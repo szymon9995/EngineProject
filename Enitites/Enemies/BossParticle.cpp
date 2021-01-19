@@ -4,7 +4,7 @@ BossParticle::BossParticle()
 {
     AlImage tmp;
     tmp.loadImage("images/Enemies/Boss/summonIdle.png");
-    particle = tmp.cropOut(17,17,15,30);
+    particle = tmp.cropOut(17,17,20,30);
     isMoving = false;
 }
 
